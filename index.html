@@ -23,6 +23,11 @@
             padding:2px 5px;
         }
     
+        .loginBtn {
+            float:right;
+            margin:3px 10px 3px 0;
+        }
+    
     </style>
 </head>
 
@@ -30,7 +35,7 @@
     
     <div class="navbar navbar-default navbar-fixed-top">
         
-        <div class="container">
+        <div class="container-fluid">
             
             <div class="navbar-header">
             
@@ -50,10 +55,10 @@
             
                 <ul class="nav navbar-nav navbar-lefts">
             
-                    <li><a href="">About</a></li>
-                    <li><a target="_blank" href="http://giveto.psu.edu/s/1218/thon/2014/p2p.aspx?sid=1218&gid=3&pgid=1135">THON</a></li>
                     <li><a href="">Upcoming</a></li>
+                    <li><a target="_blank" href="http://giveto.psu.edu/s/1218/thon/2014/p2p.aspx?sid=1218&gid=3&pgid=1135">THON</a></li>
                     <li><a href="">NRT</a></li>
+                    <li><a href="">About</a></li>
                     <li><a href="">Store</a></li>
             
                 </ul>
@@ -79,6 +84,12 @@
                                     
                                     <label for="password">Password:</label>
                                     <input type="password" class="form-control" name="password"></input>
+                                    
+                                </div>
+                                
+                                <div class="form-group loginBtn">
+                                    
+                                    <input type="submit" value="Log In" class="btn btn-primary" name="login"></input>
                                     
                                 </div>
                                 
