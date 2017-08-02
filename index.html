@@ -49,6 +49,7 @@
         }
     
         .image p {
+            width:100px;
             position:relative;
             margin:0;
             padding:0;
@@ -59,9 +60,9 @@
         .expand-down {
             position:relative;
             background:none;
-            border:none;
             padding:0;
             margin:0;
+            width:40px;
             left:48.8%;
             top:90vh;
         }
@@ -113,6 +114,13 @@
             background-image:url("images/mapSchwab.png");
         }
     
+    @media only screen and (max-width: 768px) {
+        .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+            width:100%;
+            height:200px;
+        }
+    }
+    
     </style>
 </head>
 
@@ -138,7 +146,7 @@
             
             <div class="collapse navbar-collapse">
             
-                <ul class="nav navbar-nav navbar-lefts">
+                <ul class="nav navbar-nav navbar-left">
             
                     <li><a href="#secondImage">Upcoming</a></li>
                     <li><a target="_blank" href="http://giveto.psu.edu/s/1218/thon/2014/p2p.aspx?sid=1218&gid=3&pgid=1135">THON</a></li>
@@ -192,6 +200,7 @@
         
     </div> <!-- navbar -->
     
+    
     <div class="image">
         
         <p>PHOTO HERE</p>
@@ -213,6 +222,8 @@
             <h1>The Penn State Thespians</h1>
             
             <hr />
+            
+            <!-- create into dropdown when screen become too small? -->
             
             <div class="row">
                 
@@ -307,11 +318,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    
-    <script>
 
-      
+    <script type="text/javascript">
+        
+        
+        
     </script>
 
 </html>
+
 
