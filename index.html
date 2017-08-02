@@ -79,6 +79,24 @@
             cursor:pointer;
         }
     
+        .more-info {
+            border-top:.2vh solid #333333;
+            display:none;
+            height:35vh;
+            width:100%;
+            text-align:center;
+        }
+    
+        .more-info-text {
+            font-size:1.8em;
+            padding:2vh 0 0 0;
+        }
+    
+        .more-info-p {
+            font-size:1.3em;
+            padding:5vh 0 0 0;
+        }
+    
         .description {
             background-color:#FFFFFF;
             text-align:center;
@@ -92,6 +110,10 @@
     
         .description-text {
             font-size:1.5em;
+        }
+    
+        .description-text-large h3 {
+            font-size:2.5em;
         }
     
         .spaces {
@@ -114,12 +136,23 @@
             background-image:url("images/mapSchwab.png");
         }
     
-    @media only screen and (max-width: 768px) {
-        .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
-            width:100%;
-            height:200px;
+        @media only screen and (max-width: 768px) {
+            .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+                width:100%;
+                height:200px;
+            }
         }
-    }
+    
+        .scroller {
+            overflow:auto;
+            white-space:nowrap;
+        }
+    
+        .scrollImg {
+            width:250px;
+            height:250px;
+            margin:20px;
+        }
     
     </style>
 </head>
@@ -205,15 +238,42 @@
         
         <p>PHOTO HERE</p>
         
-        <div class="expand-down">
+        <div class="expand-down expand-it">
             
-            <a href="#secondImage">
-                <span class="glyphicon glyphicon-collapse-down expand-down-icon"></span>
-            </a>
+            <!-- <a href="#secondImage"> -->
+            <span class="glyphicon glyphicon-collapse-down expand-down-icon"></span>
+            <!-- </a> -->
             
         </div> <!-- end expand-down -->
         
     </div> <!-- end image -->
+    
+    <div class="more-info">
+        
+        <div class="container">
+        
+            <div class="row">
+            
+                <div class="col-md-3 box more-info-text">Some type of info</div>
+                <div class="col-md-3 box more-info-text">Chris is a douche</div>
+                <div class="col-md-3 box more-info-text">But he's a good friend</div>
+                <div class="col-md-3 box more-info-text">...sometimes</div>
+            
+            </div>
+            
+            <div class="row">
+                
+                <div class="col-md-4 box more-info-text">more nfo</div>
+                <div class="col-md-4 box more-info-text">sure this is kinda neat</div>
+                <div class="col-md-4 box more-info-text">Will Goniprow</div>
+                
+            </div>
+            
+            <p class="more-info-p">this is a paragraph of text explaining the plot or something idk who the fuck cares about this shit anyway man... like what the fuckity fuck is this shit that i am doing at 1 in the morning. FUck this shit. this is a paragraph of text explaining the plot or something idk who the fuck cares about this shit anyway man... like what the fuckity fuck is this shit that i am doing at 1 in the morning. FUck this shit</p>
+        
+        </div>
+        
+    </div>
     
     <div class="description">
         
@@ -262,6 +322,8 @@
         
     </div> <!-- end description -->
     
+    
+    
     <div style="background-color:#0000b3;" class="image" id="secondImage">
         
         <p>PHOTO HERE</p>
@@ -308,6 +370,79 @@
             
             </div> <!-- end map-container -->
             
+            
+            <div class="col-md-12 box description-text-large">
+                
+                <h3>Previous Shows</h3>
+                
+                <hr />
+                
+            </div>
+            
+            
+        </div> <!-- end container -->
+        
+        <div class="scroller">
+        
+            <img class="scrollImg" src="images/harm.jpg" />
+            <img class="scrollImg" src="images/beauty.jpg" />
+            <img class="scrollImg" src="images/rock.jpg" />
+            <img class="scrollImg" src="images/itw.jpg" />
+            <img class="scrollImg" src="images/blonde.jpg" />
+            <img class="scrollImg" src="images/spam.png" />
+        
+        </div>
+        
+    </div> <!-- end description -->
+    
+    
+    
+    <div style="background-color:#b30000;" class="image" id="thirdImage">
+        
+        <p>PHOTO HERE</p>
+        
+        <div class="expand-down">
+            
+            <a href="#secondImage">
+                <span class="glyphicon glyphicon-collapse-down expand-down-icon"></span>
+            </a>
+            
+        </div> <!-- end expand-down -->
+        
+    </div> <!-- end secondImage -->
+    
+    <div class="description">
+        
+        <div class="container">
+            
+            <h1>NRT Show</h1>
+            
+            <hr />
+            
+            <div class="row">
+                
+                <div class="col-md-4 box description-text">AD: Andrew Bean</div>
+                <div class="col-md-4 box description-text">Director: Julie Whelan</div>
+                <div class="col-md-4 box description-text">AD: Jenna Maida</div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="row">
+                
+                <div class="col-md-12 box description-text">mm/dd - mm/dd</div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="map-container">
+                
+                <div style="background-image:url('images/mapHub.png');" class="map"> </div>
+                
+            </div> <!-- end map-container -->
+            
         </div> <!-- end container -->
         
     </div> <!-- end description -->
@@ -321,10 +456,17 @@
 
     <script type="text/javascript">
         
-        
+        $(".expand-it").click(function() {
+             
+                              if($(".more-info:visible").length == 0) {
+                                    $(".more-info").show();
+                              }
+                              else {
+                                $(".more-info").hide();
+                              }
+                              
+        });
         
     </script>
 
 </html>
-
-
