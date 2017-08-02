@@ -61,6 +61,28 @@
             margin:1px 5px 0 0;
         }
     
+        .purple-btn {
+            color:#ffffff;
+            background-color:#611BBD;
+            border-color:#130269;
+        }
+    
+        .purple-btn:hover,
+        .purple-btn:focus,
+        .purple-btn:active,
+        .purple-btn.active,
+        .open .dropdown-toggle.purple-btn {
+            color: #ffffff;
+            background-color: #49247A;
+            border-color: #130269;
+        }
+    
+        .purple-btn:active,
+        .purple-btn.active,
+        .open .dropdown-toggle.purple-btn {
+            background-image: none;
+        }
+    
         .image {
             background-color:#5900b3;
             width:100%;
@@ -205,6 +227,7 @@
             cursor:pointer;
         }
     
+    
         @media only screen and (max-width: 768px) {
             .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
                 width:100%;
@@ -309,7 +332,7 @@
                                 
                                 <div class="form-group" id="loginBtn">
                                     
-                                    <input type="submit" value="Log In" class="btn btn-primary" name="login"></input>
+                                    <input type="submit" value="Log In" class="btn purple-btn" name="login"></input>
                                     
                                 </div>
                                 
@@ -468,17 +491,9 @@
             
             </div> <!-- end map-container -->
             
-            
-            <div class="col-md-12 box description-text-large">
-                
-                <h3>Previous Shows</h3>
-                
-                <hr />
-                
-            </div>
-            
-            
         </div> <!-- end container -->
+        
+        <br />
         
         <div class="scroll-container">
         
@@ -577,6 +592,16 @@
                     </div>
         
                 </div> <!-- scroller -->
+                
+                
+        
+                <div class="col-md-12 box description-text-large prev-shows">
+            
+                    <h3>Previous Shows</h3>
+                    
+                    <hr />
+            
+                </div>
         
             </div> <!-- end container -->
         
