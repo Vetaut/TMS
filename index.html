@@ -165,34 +165,8 @@
             padding:0;
             margin:0 auto;
             border:1px solid black;
-            width:10%;
-            height:15vh;
             border-radius:50%;
             background-image:url("images/mapSchwab.png");
-        }
-    
-        @media only screen and (max-width: 768px) {
-            .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
-                width:100%;
-                height:200px;
-            }
-        }
-    
-        @media only screen and (min-width: 992px) {
-            .scroll-div:hover .scroll-img,
-            .scroll-div:focus .scroll-img {
-                -ms-transform:scale(1.08);
-                -moz-transform:scale(1.08);
-                -webkit-transform:scale(1.08);
-                -o-transform:scale(1.08);
-                transform:scale(1.08);
-                opacity:1;
-            }
-            
-            .scroll-div:hover .scroll-img:before, .scroll-div:focus .scroll-img:before {
-                display:block;
-            }
-            
         }
     
         .scroll-container {
@@ -229,6 +203,48 @@
     
         .scroll-div:hover {
             cursor:pointer;
+        }
+    
+        @media only screen and (max-width: 768px) {
+            .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+                width:100%;
+                height:200px;
+            }
+            
+            .map {
+                width:50px;
+                height:50px;
+            }
+        }
+    
+        @media only screen and (min-width: 768px) {
+            .map {
+                height:75px;
+                width:75px;
+            }
+        }
+    
+        @media only screen and (min-width: 992px) {
+            .scroll-div:hover .scroll-img,
+            .scroll-div:focus .scroll-img {
+                -ms-transform:scale(1.08);
+                -moz-transform:scale(1.08);
+                -webkit-transform:scale(1.08);
+                -o-transform:scale(1.08);
+                transform:scale(1.08);
+                opacity:1;
+            }
+            
+            .map {
+                height:100px;
+                width:100px;
+            }
+        }
+        
+            .scroll-div:hover .scroll-img:before, .scroll-div:focus .scroll-img:before {
+                display:block;
+            }
+        
         }
     
     
