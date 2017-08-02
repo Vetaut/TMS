@@ -1,0 +1,78 @@
+#topbar {
+    background-color:rgba(248, 248, 248, .92);
+    
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 5s; /* Firefox < 16 */
+    -ms-animation: fadein 5s; /* Internet Explorer */
+    -o-animation: fadein 5s; /* Opera < 12.1 */
+    animation: fadein 5s;
+}
+
+.navbar .nav > li.dropdown.open > a {
+    background-color:rgba(248, 248, 248, .95);
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+    width:250px;
+    background-color:rgba(248, 248, 248, .96);
+}
+
+.navbar-default .navbar-nav > .active{
+    background-color:rgba(248, 248, 248, .95);
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    background-color:rgba(248, 248, 248, .95);
+}
+
+.navbar-center-container {
+    text-align:center;
+}
+
+.navbar-center {
+    position:relative;
+    right:1.5%;
+    display:inline-block;
+    float:none;
+    vertical-align:top;
+}
+
+.dropdown-form{
+    padding:1px 5px;
+}
+
+#loginBtn {
+    float:right;
+    margin:1px 5px 0 0;
+}
+
+.purple-btn {
+    color:#ffffff;
+    background-color:#611BBD;
+    border-color:#130269;
+}
+
+.purple-btn:hover,
+.purple-btn:focus,
+.purple-btn:active,
+.purple-btn.active,
+.open .dropdown-toggle.purple-btn {
+    color: #ffffff;
+    background-color: #49247A;
+    border-color: #130269;
+}
+
+.purple-btn:active,
+.purple-btn.active,
+.open .dropdown-toggle.purple-btn {
+    background-image: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+        width:100%;
+        height:200px;
+    }
+}
