@@ -19,21 +19,30 @@
     
     <style>
         
+        #topbar {
+            background-color:rgba(248, 248, 248, .92);
+        }
+    
+        .navbar .nav > li.dropdown.open > a {
+            background-color:rgba(248, 248, 248, .95);
+        }
+    
+        .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+            width:600px;
+            background-color:rgba(248, 248, 248, .96);
+        }
+    
         .dropdown-form{
             padding:2px 5px;
         }
     
         #loginBtn {
             float:right;
-            margin:3px 10px 3px 0;
-        }
-    
-        #topbar {
-            background-color:rgba(248, 248, 248, .82);
+            margin:1.5px 5px 0 0;
         }
     
         .image {
-            background-color:purple;
+            background-color:#5900b3;
             width:100%;
             height:100vh;
             color:white;
@@ -43,14 +52,61 @@
             position:relative;
             margin:0;
             padding:0;
-            left:45%;
+            left:46.5%;
             top:50%;
         }
     
-        .test {
-            background-color:red;
+        .expand-down {
+            position:relative;
+            background:none;
+            border:none;
+            padding:0;
+            margin:0;
+            left:48.8%;
+            top:90vh;
+        }
+    
+        .expand-down-icon {
+            padding:0;
+            margin:0;
+            font-size:2.5em;
+            color:rgba(248, 248, 248, .5);
+        }
+    
+        .expand-down-icon:hover {
+            color:rgba(248, 248, 248, .8);
+            cursor:pointer;
+        }
+    
+        .description {
+            background-color:#FFFFFF;
+            text-align:center;
+            border-top:.2vh solid #333333;
+            border-bottom:.2vh solid #333333;
+        }
+    
+        .description p {
+            font-size:1.5em;
+        }
+    
+        .spaces {
+            display:inline-block;
+            width:3%;
+        }
+    
+        .map-container {
             width:100%;
-            height:100px;
+            margin-bottom:2%;
+        }
+    
+        .map {
+            padding:0;
+            margin:0 auto;
+            border:1px solid black;
+            width:10%;
+            height:15vh;
+            border-radius:50%;
+            background-image:url("images/mapSchwab.png");
         }
     
     </style>
@@ -80,7 +136,7 @@
             
                 <ul class="nav navbar-nav navbar-lefts">
             
-                    <li><a href="">Upcoming</a></li>
+                    <li><a href="#secondImage">Upcoming</a></li>
                     <li><a target="_blank" href="http://giveto.psu.edu/s/1218/thon/2014/p2p.aspx?sid=1218&gid=3&pgid=1135">THON</a></li>
                     <li><a href="">NRT</a></li>
                     <li><a href="">About</a></li>
@@ -133,10 +189,77 @@
     </div> <!-- navbar -->
     
     <div class="image">
+        
         <p>PHOTO HERE</p>
-    </div>
+        
+        <div class="expand-down">
+            
+            <a href="#secondImage">
+                <span class="glyphicon glyphicon-collapse-down expand-down-icon"></span>
+            </a>
+            
+        </div> <!-- end expand-down -->
+        
+    </div> <!-- end image -->
     
-    <div class="test">
+    <div class="description">
+        
+        <div class="container">
+        
+            <h1>The Penn State Thespians</h1>
+            
+            <hr />
+            
+            <p>President: Christe Fisher<span class="spaces"></span>Vice President: Lauren Goodyear<span class="spaces"></span>Secretary: Paul Basher</p>
+            <p>Treasurer: Paul Kane<span class="spaces"></span>HAL: Noelle Marchetti</p>
+            <p>Email: psuthespiansvp@gmail.com</p>
+            
+            <br />
+            
+            <div class="map-container">
+            
+            <div style="background-image:url('images/mapHub.png');" class="map"> </div>
+            
+            </div>
+            
+        </div> <!-- end container -->
+        
+    </div> <!-- end description -->
+    
+    <div style="background-color:#0000b3;" class="image" id="secondImage">
+        
+        <p>PHOTO HERE</p>
+        
+        <div class="expand-down">
+            
+            <a href="#secondImage">
+                <span class="glyphicon glyphicon-collapse-down expand-down-icon"></span>
+            </a>
+            
+        </div> <!-- end expand-down -->
+        
+    </div> <!-- end secondImage -->
+    
+    <div class="description">
+        
+        <div class="container">
+            
+            <h1>Drowsy Chaperone</h1>
+            
+            <hr />
+            
+            <p>Director: Julie Whelan<span class="spaces"></span>Technical Director: Andrew Bean<span class="spaces"></span>Producer: Jenna Maida</p>
+            <p>11/16 - 12/32</p>
+            
+            <br />
+            
+            <div class="map-container">
+                
+            <div class="map"> </div>
+            
+            </div>
+            
+        </div>
         
     </div>
     
@@ -148,10 +271,7 @@
     <script src="js/bootstrap.min.js"></script>
     
     <script>
-      
-      //var windowHeight = $(window).height();
-      
-      //$(".image").height(windowHeight + "px");
+
       
     </script>
 
