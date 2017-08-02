@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,17 +19,37 @@
     
     <style>
         
+        body {
+            position:relative;
+        }
+        
         #topbar {
             background-color:rgba(248, 248, 248, .92);
         }
     
         .navbar .nav > li.dropdown.open > a {
             background-color:rgba(248, 248, 248, .95);
+            /*color:#333333;
+            background-color:rgba(148, 77, 255, .4);*/
         }
     
         .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
             width:600px;
             background-color:rgba(248, 248, 248, .96);
+        }
+    
+        .navbar-default .navbar-nav > .active{
+            background-color:rgba(248, 248, 248, .95);
+            /*color:#333333;
+             background-color:rgba(148, 77, 255, .3);*/
+        }
+    
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:hover,
+        .navbar-default .navbar-nav > .active > a:focus {
+            background-color:rgba(248, 248, 248, .95);
+            /*color:#333333;
+             background-color:rgba(148, 77, 255, .3);*/
         }
     
         .dropdown-form{
@@ -49,13 +68,18 @@
             color:white;
         }
     
-        .image p {
-            width:100px;
+        .image-text-container {
+            width:100%;
             position:relative;
+            top:50%;
+            text-align:center;
             margin:0;
             padding:0;
-            left:46.5%;
-            top:50%;
+        }
+    
+        .image-text {
+            margin:0;
+            padding:0;
         }
     
         .expand-down {
@@ -63,9 +87,9 @@
             background:none;
             padding:0;
             margin:0;
-            width:40px;
-            left:48.8%;
-            top:90vh;
+            top:85vh;
+            text-align:center;
+            width:100%;
         }
     
         .expand-down-icon {
@@ -154,21 +178,64 @@
             }
         }
     
+        @media only screen and (min-width: 992px) {
+            .scroll-div:hover .scroll-img,
+            .scroll-div:focus .scroll-img {
+                -ms-transform:scale(1.08);
+                -moz-transform:scale(1.08);
+                -webkit-transform:scale(1.08);
+                -o-transform:scale(1.08);
+                transform:scale(1.08);
+                opacity:1;
+            }
+            
+            .scroll-div:hover .scroll-img:before, .scroll-div:focus .scroll-img:before {
+                display:block;
+            }
+            
+        }
+    
+        .scroll-container {
+            margin:20px 0 20px 0;
+        }
+    
         .scroller {
             overflow:auto;
             white-space:nowrap;
         }
     
-        .scrollImg {
+        .scroll-div {
+            display:inline-block;
             width:250px;
             height:250px;
-            margin:20px;
+            margin:0 15px 0 15px;
         }
+    
+        .scroll-img {
+            display:inline-block;
+            width:100%;
+            height:100%;
+            background-color:black;
+            background-position:center;
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-image:url("");
+            opacity:.95;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+        }
+    
+        .scroll-div:hover {
+            cursor:pointer;
+        }
+    
     
     </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#data-spy">
     
     <div class="navbar navbar-default navbar-fixed-top" id="topbar">
         
@@ -188,13 +255,13 @@
             
             </div> <!-- end navbar-header -->
             
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="data-spy">
             
                 <ul class="nav navbar-nav navbar-left">
             
                     <li><a href="#upcoming">Upcoming</a></li>
-                    <li><a target="_blank" href="http://giveto.psu.edu/s/1218/thon/2014/p2p.aspx?sid=1218&gid=3&pgid=1135">THON</a></li>
                     <li><a href="#NRT">NRT</a></li>
+                    <li><a target="_blank" href="http://giveto.psu.edu/s/1218/thon/2014/p2p.aspx?sid=1218&gid=3&pgid=1135">THON</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Store</a></li>
             
@@ -247,7 +314,9 @@
     
     <div class="image">
         
-        <p>PHOTO HERE</p>
+        <div class="image-text-container">
+            <p class="image-text">PHOTO HERE</p>
+        </div>
         
         <div class="expand-down">
             
@@ -257,7 +326,7 @@
             
         </div> <!-- end expand-down -->
         
-    </div> <!-- end image -->
+    </div> <!-- end MAIN image -->
     
     <div class="description">
         
@@ -304,19 +373,21 @@
             
         </div> <!-- end container -->
         
-    </div> <!-- end description -->
+    </div> <!-- end MAIN description -->
     
     
     
     <div style="background-color:#0000b3;" class="image" id="upcoming">
         
-        <p>PHOTO HERE</p>
-        
-        <div class="expand-down expand-it">
+        <div class="image-text-container">
+            <p class="image-text">PHOTO HERE</p>
+        </div>
+    
+        <div class="expand-down">
             
-            <a href="#secondImage">
-                <span class="glyphicon glyphicon-collapse-down expand-down-icon"></span>
-            </a>
+            <!-- <a href="#NRT"> -->
+                <span class="glyphicon glyphicon-collapse-down expand-down-icon expand-it"></span>
+            <!-- </a> -->
             
         </div> <!-- end expand-down -->
         
@@ -393,16 +464,107 @@
             
         </div> <!-- end container -->
         
-        <div class="scroller">
+        <div class="scroll-container">
         
-            <img class="scrollImg" src="images/harm.jpg" />
-            <img class="scrollImg" src="images/beauty.jpg" />
-            <img class="scrollImg" src="images/rock.jpg" />
-            <img class="scrollImg" src="images/itw.jpg" />
-            <img class="scrollImg" src="images/blonde.jpg" />
-            <img class="scrollImg" src="images/spam.png" />
+            <div class="container">
+            
+                <div class="scroller">
+            
+                    <div class="scroll-div" data-toggle="modal" data-target="#modalOne">
+                
+                        <div class="scroll-img" style="background-image:url('images/harm.jpg')"></div>
+                
+                    </div> <!-- end scroll-Div -->
+            
+                    <div class="modal fade" id="modalOne" tabindex="-1" role="dialog" aria-labelledby="modalOne">
+                
+                        <div class="modal-dialog" role="document">
+                    
+                            <div class="modal-content">
+                        
+                                <div class="modal-header">
+                            
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            
+                                    <h4 class="modal-title" id="Harmonies">Harmonies!</h4>
+                            
+                                </div> <!-- end modal-header -->
+                        
+                                <div class="modal-body">
+                            
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                            
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                            
+                                </div> <!-- end modal-body --->
+                        
+                                <div class="modal-footer">
+                            
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            
+                                </div> <!-- end modal-footer -->
+                        
+                            </div> <!-- modal-content -->
+                    
+                        </div> <!-- emd modal-dialog -->
+                
+                    </div> <!-- end modal -->
+            
+                    <div class="scroll-div">
+                
+                        <div class="scroll-img" style="background-image:url('images/beauty.jpg')" ></div>
+                
+                    </div>
+            
+                    <div class="scroll-div">
+                
+                        <div class="scroll-img" style="background-image:url('images/rock.jpg')" ></div>
+                
+                    </div>
+            
+                    <div class="scroll-div">
+                
+                        <div class="scroll-img" style="background-image:url('images/itw.jpg')" ></div>
+            
+                    </div>
+            
+                    <div class="scroll-div">
+            
+                        <div class="scroll-img" style="background-image:url('images/blonde.jpg')" ></div>
+            
+                    </div>
+            
+                    <div class="scroll-div">
+            
+                        <div class="scroll-img" style="background-image:url('images/spam.png')" ></div>
+            
+                    </div>
         
-        </div>
+                </div> <!-- scroller -->
+        
+            </div> <!-- end container -->
+        
+        </div> <!-- end scroll-container -->
         
     </div> <!-- end description -->
     
@@ -410,17 +572,17 @@
     
     <div style="background-color:#b30000;" class="image" id="NRT">
         
-        <p>PHOTO HERE</p>
+        <div class="image-text-container">
+            <p class="image-text">PHOTO HERE</p>
+        </div>
         
-        <div class="expand-down expand-it-nrt">
+        <div class="expand-down">
             
-            <!-- <a href=""> -->
-                <span class="glyphicon glyphicon-collapse-down expand-down-icon"></span>
-            <!-- </a> -->
+            <span class="glyphicon glyphicon-collapse-down expand-down-icon expand-it-nrt"></span>
             
         </div> <!-- end expand-down -->
         
-    </div> <!-- end secondImage -->
+    </div> <!-- end NRTImage -->
     
     <div class="more-info-nrt">
         
