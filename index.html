@@ -19,18 +19,266 @@
     
     <style>
         
-        .dropdown-form{
-            padding:2px 5px;
+        body {
+            position:relative;
         }
+        
+        #topbar {
+            background-color:rgba(248, 248, 248, .92);
+        }
+    
+        .navbar .nav > li.dropdown.open > a {
+            background-color:rgba(248, 248, 248, .95);
+            /*color:#333333;
+            background-color:rgba(148, 77, 255, .4);*/
+        }
+    
+        .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+            width:250px;
+            background-color:rgba(248, 248, 248, .96);
+        }
+    
+        .navbar-default .navbar-nav > .active{
+            background-color:rgba(248, 248, 248, .95);
+            /*color:#333333;
+             background-color:rgba(148, 77, 255, .3);*/
+        }
+    
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:hover,
+        .navbar-default .navbar-nav > .active > a:focus {
+            background-color:rgba(248, 248, 248, .95);
+            /*color:#333333;
+             background-color:rgba(148, 77, 255, .3);*/
+        }
+    
+        .dropdown-form{
+            padding:1px 5px;
+        }
+    
+        #loginBtn {
+            float:right;
+            margin:1px 5px 0 0;
+        }
+    
+        .purple-btn {
+            color:#ffffff;
+            background-color:#611BBD;
+            border-color:#130269;
+        }
+    
+        .purple-btn:hover,
+        .purple-btn:focus,
+        .purple-btn:active,
+        .purple-btn.active,
+        .open .dropdown-toggle.purple-btn {
+            color: #ffffff;
+            background-color: #49247A;
+            border-color: #130269;
+        }
+    
+        .purple-btn:active,
+        .purple-btn.active,
+        .open .dropdown-toggle.purple-btn {
+            background-image: none;
+        }
+    
+        .image {
+            background-color:#5900b3;
+            width:100%;
+            height:100vh;
+            color:white;
+        }
+    
+        .image-text-container {
+            width:100%;
+            position:relative;
+            top:50%;
+            text-align:center;
+            margin:0;
+            padding:0;
+        }
+    
+        .image-text {
+            margin:0;
+            padding:0;
+        }
+    
+        .expand-down {
+            position:relative;
+            background:none;
+            padding:0;
+            margin:0;
+            top:85vh;
+            text-align:center;
+            width:100%;
+        }
+    
+        .expand-down-icon {
+            padding:0;
+            margin:0;
+            font-size:2.5em;
+            color:rgba(248, 248, 248, .5);
+        }
+    
+        .expand-down-icon:hover {
+            color:rgba(248, 248, 248, .8);
+            cursor:pointer;
+        }
+    
+        .more-info {
+            overflow:auto;
+            border-top:.2vh solid #333333;
+            display:none;
+            height:35vh;
+            width:100%;
+            text-align:center;
+        }
+    
+        .more-info-text {
+            font-size:1.8em;
+            padding:2vh 0 0 0;
+        }
+    
+        .more-info-p {
+            font-size:1.3em;
+            padding:5vh 0 0 0;
+        }
+    
+        .more-info-nrt {
+            overflow:auto;
+            border-top:.2vh solid #333333;
+            display:none;
+            height:35vh;
+            width:100%;
+            text-align:center;
+        }
+    
+        .description {
+            background-color:#FFFFFF;
+            text-align:center;
+            border-top:.2vh solid #333333;
+            border-bottom:.2vh solid #333333;
+        }
+    
+        .description p {
+            font-size:1.5em;
+        }
+    
+        .description-text {
+            font-size:1.5em;
+        }
+    
+        .description-text-large h3 {
+            font-size:2.5em;
+        }
+    
+        .spaces {
+            display:inline-block;
+            width:3%;
+        }
+    
+        .map-container {
+            width:100%;
+            margin-bottom:2%;
+        }
+    
+        .map {
+            padding:0;
+            margin:0 auto;
+            border:1px solid black;
+            border-radius:50%;
+            background-image:url("images/mapSchwab.png");
+        }
+    
+        .scroll-container {
+            margin:20px 0 20px 0;
+        }
+    
+        .scroller {
+            overflow:auto;
+            white-space:nowrap;
+        }
+    
+        .scroll-div {
+            display:inline-block;
+            width:250px;
+            height:250px;
+            margin:0 15px 0 15px;
+        }
+    
+        .scroll-img {
+            display:inline-block;
+            width:100%;
+            height:100%;
+            background-color:black;
+            background-position:center;
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-image:url("");
+            opacity:.95;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+        }
+    
+        .scroll-div:hover {
+            cursor:pointer;
+        }
+    
+    
+        @media only screen and (max-width: 768px) {
+            .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+                width:100%;
+                height:200px;
+            }
+            
+            .map {
+                width:50px;
+                height:50px;
+            }
+        }
+    
+        @media only screen and (min-width: 768px) {
+            .map {
+                height:75px;
+                width:75px;
+            }
+        }
+    
+        @media only screen and (min-width: 992px) {
+            .scroll-div:hover .scroll-img,
+            .scroll-div:focus .scroll-img {
+                -ms-transform:scale(1.08);
+                -moz-transform:scale(1.08);
+                -webkit-transform:scale(1.08);
+                -o-transform:scale(1.08);
+                transform:scale(1.08);
+                opacity:1;
+            }
+            
+            .map {
+                height:100px;
+                width:100px;
+            }
+        }
+        
+            .scroll-div:hover .scroll-img:before, .scroll-div:focus .scroll-img:before {
+                display:block;
+            }
+        
+        }
+    
     
     </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#data-spy">
     
-    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top" id="topbar">
         
-        <div class="container">
+        <div class="container-fluid">
             
             <div class="navbar-header">
             
@@ -46,14 +294,14 @@
             
             </div> <!-- end navbar-header -->
             
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="data-spy">
             
-                <ul class="nav navbar-nav navbar-lefts">
+                <ul class="nav navbar-nav navbar-left">
             
-                    <li><a href="">About</a></li>
+                    <li><a href="#upcoming">Upcoming</a></li>
+                    <li><a href="#NRT">NRT</a></li>
                     <li><a target="_blank" href="http://giveto.psu.edu/s/1218/thon/2014/p2p.aspx?sid=1218&gid=3&pgid=1135">THON</a></li>
-                    <li><a href="">Upcoming</a></li>
-                    <li><a href="">NRT</a></li>
+                    <li><a href="">About</a></li>
                     <li><a href="">Store</a></li>
             
                 </ul>
@@ -66,7 +314,7 @@
                         
                         <div class="dropdown-menu">
                             
-                            <form class="form-inline">
+                            <form class="form">
                                 
                                 <div class="form-group dropdown-form">
                                     
@@ -79,6 +327,12 @@
                                     
                                     <label for="password">Password:</label>
                                     <input type="password" class="form-control" name="password"></input>
+                                    
+                                </div>
+                                
+                                <div class="form-group" id="loginBtn">
+                                    
+                                    <input type="submit" value="Log In" class="btn purple-btn" name="login"></input>
                                     
                                 </div>
                                 
@@ -96,11 +350,375 @@
         
     </div> <!-- navbar -->
     
+    
+    <div class="image">
+        
+        <div class="image-text-container">
+            <p class="image-text">PHOTO HERE</p>
+        </div>
+        
+        <div class="expand-down">
+            
+            <a href="#upcoming">
+            <span class="glyphicon glyphicon-collapse-down expand-down-icon"></span>
+            </a>
+            
+        </div> <!-- end expand-down -->
+        
+    </div> <!-- end MAIN image -->
+    
+    <div class="description">
+        
+        <div class="container">
+        
+            <h1>The Penn State Thespians</h1>
+            
+            <hr />
+            
+            <!-- create into dropdown when screen become too small? -->
+            
+            <div class="row">
+                
+                <div class="col-md-4 box description-text">VP: Lauren Goodyear</div>
+                <div class="col-md-4 box description-text">President: Christe Fisher</div>
+                <div class="col-md-4 box description-text">Secretary: Paul Basher</div>
+                
+            </div>
+            
+            <div class="row">
+                
+                <div class="col-md-3 box description-text"></div>
+                <div class="col-md-3 box description-text">Treasurer: Paul Kane</div>
+                <div class="col-md-3 box description-text">HAL: Noelle Marchetti</div>
+                <div class="col-md-3 box description-text"></div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="row">
+                
+                <div class="col-md-12 box description-text">Email: psuthespiansvp@gmail.com</div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="map-container">
+            
+            <div style="background-image:url('images/mapHub.png');" class="map"> </div>
+            
+            </div> <!-- end map-container -->
+            
+        </div> <!-- end container -->
+        
+    </div> <!-- end MAIN description -->
+    
+    
+    
+    <div style="background-color:#0000b3;" class="image" id="upcoming">
+        
+        <div class="image-text-container">
+            <p class="image-text">PHOTO HERE</p>
+        </div>
+    
+        <div class="expand-down">
+            
+            <!-- <a href="#NRT"> -->
+                <span class="glyphicon glyphicon-collapse-down expand-down-icon expand-it"></span>
+            <!-- </a> -->
+            
+        </div> <!-- end expand-down -->
+        
+    </div> <!-- end secondImage -->
+    
+    <div class="more-info">
+        
+        <div class="container">
+            
+            <div class="row">
+                
+                <div class="col-md-3 box more-info-text">Some type of info</div>
+                <div class="col-md-3 box more-info-text">Chris is a douche</div>
+                <div class="col-md-3 box more-info-text">But he's a good friend</div>
+                <div class="col-md-3 box more-info-text">...sometimes</div>
+                
+            </div>
+            
+            <div class="row">
+                
+                <div class="col-md-4 box more-info-text">more nfo</div>
+                <div class="col-md-4 box more-info-text">sure this is kinda neat</div>
+                <div class="col-md-4 box more-info-text">Will Goniprow</div>
+                
+            </div>
+            
+            <p class="more-info-p">this is a paragraph of text explaining the plot or something idk who the fuck cares about this shit anyway man... like what the fuckity fuck is this shit that i am doing at 1 in the morning. FUck this shit. this is a paragraph of text explaining the plot or something idk who the fuck cares about this shit anyway man... like what the fuckity fuck is this shit that i am doing at 1 in the morning. FUck this shit</p>
+            
+        </div>
+        
+    </div>
+    
+    <div class="description">
+        
+        <div class="container">
+            
+            <h1>Drowsy Chaperone</h1>
+            
+            <hr />
+            
+            <div class="row">
+                
+                <div class="col-md-4 box description-text">Director: Julie Whelan</div>
+                <div class="col-md-4 box description-text">Technical Director: Andrew Bean</div>
+                <div class="col-md-4 box description-text">Producer: Jenna Maida</div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="row">
+                
+                <div class="col-md-12 box description-text">11/16 - 12/32</div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="map-container">
+                
+            <div class="map"> </div>
+            
+            </div> <!-- end map-container -->
+            
+        </div> <!-- end container -->
+        
+        <br />
+        
+        <div class="scroll-container">
+        
+            <div class="container">
+            
+                <div class="scroller">
+            
+                    <div class="scroll-div" data-toggle="modal" data-target="#modalOne">
+                
+                        <div class="scroll-img" style="background-image:url('images/harm.jpg')"></div>
+                
+                    </div> <!-- end scroll-Div -->
+            
+                    <div class="modal fade" id="modalOne" tabindex="-1" role="dialog" aria-labelledby="modalOne">
+                
+                        <div class="modal-dialog" role="document">
+                    
+                            <div class="modal-content">
+                        
+                                <div class="modal-header">
+                            
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            
+                                    <h4 class="modal-title" id="Harmonies">Harmonies!</h4>
+                            
+                                </div> <!-- end modal-header -->
+                        
+                                <div class="modal-body">
+                            
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                            
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                                    <p>This is place holder text</p>
+                            
+                                </div> <!-- end modal-body --->
+                        
+                                <div class="modal-footer">
+                            
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            
+                                </div> <!-- end modal-footer -->
+                        
+                            </div> <!-- modal-content -->
+                    
+                        </div> <!-- emd modal-dialog -->
+                
+                    </div> <!-- end modal -->
+            
+                    <div class="scroll-div">
+                
+                        <div class="scroll-img" style="background-image:url('images/beauty.jpg')" ></div>
+                
+                    </div>
+            
+                    <div class="scroll-div">
+                
+                        <div class="scroll-img" style="background-image:url('images/rock.jpg')" ></div>
+                
+                    </div>
+            
+                    <div class="scroll-div">
+                
+                        <div class="scroll-img" style="background-image:url('images/itw.jpg')" ></div>
+            
+                    </div>
+            
+                    <div class="scroll-div">
+            
+                        <div class="scroll-img" style="background-image:url('images/blonde.jpg')" ></div>
+            
+                    </div>
+            
+                    <div class="scroll-div">
+            
+                        <div class="scroll-img" style="background-image:url('images/spam.png')" ></div>
+            
+                    </div>
+        
+                </div> <!-- scroller -->
+                
+                
+        
+                <div class="col-md-12 box description-text-large prev-shows">
+            
+                    <h3>Previous Shows</h3>
+                    
+                    <hr />
+            
+                </div>
+        
+            </div> <!-- end container -->
+        
+        </div> <!-- end scroll-container -->
+        
+    </div> <!-- end description -->
+    
+    
+    
+    <div style="background-color:#b30000;" class="image" id="NRT">
+        
+        <div class="image-text-container">
+            <p class="image-text">PHOTO HERE</p>
+        </div>
+        
+        <div class="expand-down">
+            
+            <span class="glyphicon glyphicon-collapse-down expand-down-icon expand-it-nrt"></span>
+            
+        </div> <!-- end expand-down -->
+        
+    </div> <!-- end NRTImage -->
+    
+    <div class="more-info-nrt">
+        
+        <div class="container">
+            
+            <div class="row">
+                
+                <div class="col-md-3 box more-info-text">Some type of info</div>
+                <div class="col-md-3 box more-info-text">Chris is a douche</div>
+                <div class="col-md-3 box more-info-text">But he's a good friend</div>
+                <div class="col-md-3 box more-info-text">...sometimes</div>
+                
+            </div>
+            
+            <div class="row">
+                
+                <div class="col-md-4 box more-info-text">more nfo</div>
+                <div class="col-md-4 box more-info-text">sure this is kinda neat</div>
+                <div class="col-md-4 box more-info-text">Will Goniprow</div>
+                
+            </div>
+            
+            <p class="more-info-p">this is a paragraph of text explaining the plot or something idk who the fuck cares about this shit anyway man... like what the fuckity fuck is this shit that i am doing at 1 in the morning. FUck this shit. this is a paragraph of text explaining the plot or something idk who the fuck cares about this shit anyway man... like what the fuckity fuck is this shit that i am doing at 1 in the morning. FUck this shit</p>
+            
+        </div>
+        
+    </div>
+    
+    <div class="description">
+        
+        <div class="container">
+            
+            <h1>NRT Show</h1>
+            
+            <hr />
+            
+            <div class="row">
+                
+                <div class="col-md-4 box description-text">AD: Andrew Bean</div>
+                <div class="col-md-4 box description-text">Director: Julie Whelan</div>
+                <div class="col-md-4 box description-text">AD: Jenna Maida</div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="row">
+                
+                <div class="col-md-12 box description-text">mm/dd - mm/dd</div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="map-container">
+                
+                <div style="background-image:url('images/mapHub.png');" class="map"> </div>
+                
+            </div> <!-- end map-container -->
+            
+        </div> <!-- end container -->
+        
+    </div> <!-- end description -->
+    
 </body>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        
+        $(".expand-it").click(function() {
+             
+                              if($(".more-info:visible").length == 0) {
+                                    $(".more-info").show();
+                              }
+                              else {
+                                $(".more-info").hide();
+                              }
+                              
+        });
+        
+        $(".expand-it-nrt").click(function() {
+                              
+                              if($(".more-info-nrt:visible").length == 0) {
+                                    $(".more-info-nrt").show();
+                              }
+                              else {
+                                    $(".more-info-nrt").hide();
+                              }
+                              
+        });
+        
+    </script>
 
 </html>
