@@ -34,7 +34,7 @@
         }
     
         .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
-            width:600px;
+            width:250px;
             background-color:rgba(248, 248, 248, .96);
         }
     
@@ -53,12 +53,34 @@
         }
     
         .dropdown-form{
-            padding:2px 5px;
+            padding:1px 5px;
         }
     
         #loginBtn {
             float:right;
-            margin:1.5px 5px 0 0;
+            margin:1px 5px 0 0;
+        }
+    
+        .purple-btn {
+            color:#ffffff;
+            background-color:#611BBD;
+            border-color:#130269;
+        }
+    
+        .purple-btn:hover,
+        .purple-btn:focus,
+        .purple-btn:active,
+        .purple-btn.active,
+        .open .dropdown-toggle.purple-btn {
+            color: #ffffff;
+            background-color: #49247A;
+            border-color: #130269;
+        }
+    
+        .purple-btn:active,
+        .purple-btn.active,
+        .open .dropdown-toggle.purple-btn {
+            background-image: none;
         }
     
         .image {
@@ -291,7 +313,7 @@
                         
                         <div class="dropdown-menu">
                             
-                            <form class="form-inline">
+                            <form class="form">
                                 
                                 <div class="form-group dropdown-form">
                                     
@@ -309,7 +331,7 @@
                                 
                                 <div class="form-group" id="loginBtn">
                                     
-                                    <input type="submit" value="Log In" class="btn btn-primary" name="login"></input>
+                                    <input type="submit" value="Log In" class="btn purple-btn" name="login"></input>
                                     
                                 </div>
                                 
