@@ -19,18 +19,116 @@
     
     <style>
         
+        #topbar {
+            background-color:rgba(248, 248, 248, .92);
+        }
+    
+        .navbar .nav > li.dropdown.open > a {
+            background-color:rgba(248, 248, 248, .95);
+        }
+    
+        .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+            width:600px;
+            background-color:rgba(248, 248, 248, .96);
+        }
+    
         .dropdown-form{
             padding:2px 5px;
         }
+    
+        #loginBtn {
+            float:right;
+            margin:1.5px 5px 0 0;
+        }
+    
+        .image {
+            background-color:#5900b3;
+            width:100%;
+            height:100vh;
+            color:white;
+        }
+    
+        .image p {
+            width:100px;
+            position:relative;
+            margin:0;
+            padding:0;
+            left:46.5%;
+            top:50%;
+        }
+    
+        .expand-down {
+            position:relative;
+            background:none;
+            padding:0;
+            margin:0;
+            width:40px;
+            left:48.8%;
+            top:90vh;
+        }
+    
+        .expand-down-icon {
+            padding:0;
+            margin:0;
+            font-size:2.5em;
+            color:rgba(248, 248, 248, .5);
+        }
+    
+        .expand-down-icon:hover {
+            color:rgba(248, 248, 248, .8);
+            cursor:pointer;
+        }
+    
+        .description {
+            background-color:#FFFFFF;
+            text-align:center;
+            border-top:.2vh solid #333333;
+            border-bottom:.2vh solid #333333;
+        }
+    
+        .description p {
+            font-size:1.5em;
+        }
+    
+        .description-text {
+            font-size:1.5em;
+        }
+    
+        .spaces {
+            display:inline-block;
+            width:3%;
+        }
+    
+        .map-container {
+            width:100%;
+            margin-bottom:2%;
+        }
+    
+        .map {
+            padding:0;
+            margin:0 auto;
+            border:1px solid black;
+            width:10%;
+            height:15vh;
+            border-radius:50%;
+            background-image:url("images/mapSchwab.png");
+        }
+    
+    @media only screen and (max-width: 768px) {
+        .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+            width:100%;
+            height:200px;
+        }
+    }
     
     </style>
 </head>
 
 <body>
     
-    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top" id="topbar">
         
-        <div class="container">
+        <div class="container-fluid">
             
             <div class="navbar-header">
             
@@ -48,12 +146,12 @@
             
             <div class="collapse navbar-collapse">
             
-                <ul class="nav navbar-nav navbar-lefts">
+                <ul class="nav navbar-nav navbar-left">
             
-                    <li><a href="">About</a></li>
+                    <li><a href="#secondImage">Upcoming</a></li>
                     <li><a target="_blank" href="http://giveto.psu.edu/s/1218/thon/2014/p2p.aspx?sid=1218&gid=3&pgid=1135">THON</a></li>
-                    <li><a href="">Upcoming</a></li>
                     <li><a href="">NRT</a></li>
+                    <li><a href="">About</a></li>
                     <li><a href="">Store</a></li>
             
                 </ul>
@@ -82,6 +180,12 @@
                                     
                                 </div>
                                 
+                                <div class="form-group" id="loginBtn">
+                                    
+                                    <input type="submit" value="Log In" class="btn btn-primary" name="login"></input>
+                                    
+                                </div>
+                                
                             </form>
                             
                         </div>
@@ -96,6 +200,118 @@
         
     </div> <!-- navbar -->
     
+    
+    <div class="image">
+        
+        <p>PHOTO HERE</p>
+        
+        <div class="expand-down">
+            
+            <a href="#secondImage">
+                <span class="glyphicon glyphicon-collapse-down expand-down-icon"></span>
+            </a>
+            
+        </div> <!-- end expand-down -->
+        
+    </div> <!-- end image -->
+    
+    <div class="description">
+        
+        <div class="container">
+        
+            <h1>The Penn State Thespians</h1>
+            
+            <hr />
+            
+            <!-- create into dropdown when screen become too small? -->
+            
+            <div class="row">
+                
+                <div class="col-md-4 box description-text">VP: Lauren Goodyear</div>
+                <div class="col-md-4 box description-text">President: Christe Fisher</div>
+                <div class="col-md-4 box description-text">Secretary: Paul Basher</div>
+                
+            </div>
+            
+            <div class="row">
+                
+                <div class="col-md-3 box description-text"></div>
+                <div class="col-md-3 box description-text">Treasurer: Paul Kane</div>
+                <div class="col-md-3 box description-text">HAL: Noelle Marchetti</div>
+                <div class="col-md-3 box description-text"></div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="row">
+                
+                <div class="col-md-12 box description-text">Email: psuthespiansvp@gmail.com</div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="map-container">
+            
+            <div style="background-image:url('images/mapHub.png');" class="map"> </div>
+            
+            </div> <!-- end map-container -->
+            
+        </div> <!-- end container -->
+        
+    </div> <!-- end description -->
+    
+    <div style="background-color:#0000b3;" class="image" id="secondImage">
+        
+        <p>PHOTO HERE</p>
+        
+        <div class="expand-down">
+            
+            <a href="#secondImage">
+                <span class="glyphicon glyphicon-collapse-down expand-down-icon"></span>
+            </a>
+            
+        </div> <!-- end expand-down -->
+        
+    </div> <!-- end secondImage -->
+    
+    <div class="description">
+        
+        <div class="container">
+            
+            <h1>Drowsy Chaperone</h1>
+            
+            <hr />
+            
+            <div class="row">
+                
+                <div class="col-md-4 box description-text">Director: Julie Whelan</div>
+                <div class="col-md-4 box description-text">Technical Director: Andrew Bean</div>
+                <div class="col-md-4 box description-text">Producer: Jenna Maida</div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="row">
+                
+                <div class="col-md-12 box description-text">11/16 - 12/32</div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="map-container">
+                
+            <div class="map"> </div>
+            
+            </div> <!-- end map-container -->
+            
+        </div> <!-- end container -->
+        
+    </div> <!-- end description -->
+    
 </body>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -103,4 +319,12 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
+    <script type="text/javascript">
+        
+        
+        
+    </script>
+
 </html>
+
+
