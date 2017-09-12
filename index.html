@@ -381,3 +381,112 @@
         </div> <!-- end scroll-container -->
         
     </div> <!-- end description -->
+    
+    
+    
+    <div style="background-color:#b30000;" class="image" id="NRT">
+        
+        <div class="image-text-container">
+            <p class="image-text">PHOTO HERE</p>
+        </div>
+        
+        <div class="expand-down">
+            
+            <span class="glyphicon glyphicon-collapse-down expand-down-icon expand-it-nrt"></span>
+            
+        </div> <!-- end expand-down -->
+        
+    </div> <!-- end NRTImage -->
+    
+    <div class="more-info-nrt">
+        
+        <div class="container">
+            
+            <div class="row">
+                
+                <div class="col-md-6 box more-info-text">House of Blue Leaves (9/13-15)</div>
+                <div class="col-md-6 box more-info-text">Circle Mirror Transformation (9/21-23)</div>
+                
+            </div>
+            
+            <div class="row">
+                
+                <div class="col-md-6 box more-info-text">Deathtrap (9/28-30)</div>
+                <div class="col-md-6 box more-info-text">W;t (10/5-7)</div>
+                
+            </div>
+            
+            <p class="more-info-p light-text">No refund theatre is like a sister club to The Penn State Thespians and another great way to get involved with theatre at Penn State!! For more information on their shows follow this link <a href="http://norefundtheatre.weebly.com/">here!</a></p>
+            
+        </div>
+        
+    </div>
+    
+    <div class="description">
+        
+        <div class="container">
+            
+            <h1>No Refund Theatre</h1>
+            
+            <hr />
+            
+            <div class="row">
+                
+                <div class="col-md-4 box description-text">President: Julie Whelan</div>
+                <div class="col-md-4 box description-text">Other thing: </div>
+                <div class="col-md-4 box description-text">Idk: Jenna Maida</div>
+                
+            </div>
+            
+            <br />
+            
+            <div class="row">
+                
+                <div class="col-md-12 box description-text">Email: ...</div>
+                
+            </div>
+            
+            <br />
+            
+        </div> <!-- end container -->
+        
+    </div> <!-- end description -->
+    
+</body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        
+        $(".expand-it").click(function() {
+             
+                              if($(".more-info:visible").length == 0) {
+                                    $(".more-info").show();
+                              }
+                              else {
+                                $(".more-info").hide();
+                              }
+                              
+        });
+        
+        $(".expand-it-nrt").click(function() {
+                              
+                              if($(".more-info-nrt:visible").length == 0) {
+                                    $(".more-info-nrt").show();
+                              }
+                              else {
+                                    $(".more-info-nrt").hide();
+                              }
+                              
+        });
+        
+    </script>
+    
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaA7Tyd1lQbBY5mFtBJcM8qWxozahjIC8&callback=initMap">
+    </script>
+
+</html>
