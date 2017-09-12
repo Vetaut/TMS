@@ -1,12 +1,25 @@
 body {
     position:relative;
     background-color:black;
+    font-family:'Lato', sans-serif;
     
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
     -ms-animation: fadein 2s; /* Internet Explorer */
     -o-animation: fadein 2s; /* Opera < 12.1 */
     animation: fadein 2s;
+}
+
+.italic-text {
+    font-style:italic;
+}
+
+.light-text{
+    font-weight:lighter;
+}
+
+.container {
+    background-color:white;
 }
 
 .image {
@@ -26,6 +39,7 @@ body {
 }
 
 .image-text {
+    font-family:'Lato', sans-serif;
     margin:0;
     padding:0;
 }
@@ -53,12 +67,19 @@ body {
 }
 
 .more-info {
+    background-color:white;
     overflow:auto;
     border-top:.2vh solid #333333;
     display:none;
     height:35vh;
     width:100%;
     text-align:center;
+}
+
+.more-info-header {
+    font-size:2em;
+    font-weight:bold;
+    padding:0 0 0 0;
 }
 
 .more-info-text {
@@ -72,6 +93,7 @@ body {
 }
 
 .more-info-nrt {
+    background-color:white;
     overflow:auto;
     border-top:.2vh solid #333333;
     display:none;
