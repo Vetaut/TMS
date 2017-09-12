@@ -31,11 +31,14 @@
             background-color:gray;
         }
     
-    .map {
-        background-position:center;
+    
+    .expand-button {
+        border-radius:50%;
+        color:#FFF;
+        text-align:center;
+        background-color:rgba(255, 255, 255, .0);
+        border:2px solid #FFF;
     }
-    
-    
     
     </style>
 </head>
@@ -130,7 +133,12 @@
         
         <div class="expand-down">
             
-            <!-- <a href="#upcoming"> -->
+            
+            <button class="btn expand-button" type="button" data-toggle="collapse" data-target="#expand" aria-expanded="false" aria-controls="expand">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </button>
+            
+            <!-- <a href="#upcoming">
             <span class="glyphicon glyphicon-collapse-down expand-down-icon expand-it"></span>
             <!-- </a> -->
             
@@ -139,9 +147,9 @@
         
     </div> <!-- end MAIN image -->
     
-    <div class="more-info">
-        
+    <div class="more-info" id="expand">
         <div class="container">
+        <div class="well well-sm">
 
             <div class="row">
                        
@@ -161,6 +169,8 @@
             
             <p class="more-info-p light-text">this is a paragraph of text explaining the plot or something idk who the fuck cares about this shit anyway man... like what the fuckity fuck is this shit that i am doing at 1 in the morning. FUck this shit. this is a paragraph of text explaining the plot or something idk who the fuck cares about this shit anyway man... like what the fuckity fuck is this shit that i am doing at 1 in the morning. FUck this shit</p>
             
+        </div>
+        
         </div>
         
     </div>
@@ -197,15 +207,21 @@
             
             <!-- till here -->
             
-            <div class="map-container">
-             
-             <a target="_blank" href="https://www.google.com/maps/place/Schwab+Auditorium,+State+College,+PA+16801/@40.7965809,-77.8658924,17z/data=!3m1!4b1!4m13!1m7!3m6!1s0x89cea89ef285e871:0x3753a5cec1696eef!2sSchwab+Auditorium,+State+College,+PA+16801!3b1!8m2!3d40.7965809!4d-77.8636984!3m4!1s0x89cea89ef285e871:0x3753a5cec1696eef!8m2!3d40.7965809!4d-77.8636984">
-                 
-                 <div style="background-image:url('images/schwab.jpg');" class="map"> </div>
                 
-                </a>
-                
-            </div> <!-- end map-container -->
+                <div class="map-container">
+                    
+                    <div class="map-image"></div>
+                    
+                    <div class="map-blocker"></div>
+                    
+                    <div class="marker-container">
+                        
+                        <span class="glyphicon glyphicon-map-marker map-marker"></span>
+                        
+                    </div>
+                    
+                </div> <!-- end map-container -->
+            
             
         </div> <!-- end container -->
         
