@@ -109,7 +109,7 @@ body {
 .description {
     background-color:#FFFFFF;
     text-align:center;
-    border-top:.2vh solid #333333;
+    border-top:.2vh solid #EEEEEE;
     border-bottom:.2vh solid #333333;
 }
 
@@ -151,7 +151,7 @@ body {
     background-position:center;
     background-size:200px 200px;
     position:absolute;
-    left:44.5%;
+    left:44.5vw;
     width:150px;
     height:150px;
 }
@@ -167,6 +167,14 @@ body {
     height:150px;
     position:absolute;
     left:44.5%;
+}
+
+.map-button {
+    position:absolute;
+    left:44.5%;
+    width:150px;
+    height:150px;
+    background-color:rgba(255, 255, 255, .0);
 }
 
 .map {
