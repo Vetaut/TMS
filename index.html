@@ -21,6 +21,8 @@
     
     <link href="navBar.css" type="text/css" rel="stylesheet">
     <link href="index.css" type="text/css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     
     <style>
         
@@ -31,6 +33,18 @@
             background-color:gray;
         }
     
+    #map {
+        height:400px;
+        width:100%;
+    }
+    
+    .map-button {
+        position:absolute;
+        left:44.5%;
+        width:150px;
+        height:150px;
+        background-color:rgba(255, 255, 255, .0);
+    }
     
     .expand-button {
         border-radius:50%;
@@ -39,6 +53,16 @@
         background-color:rgba(255, 255, 255, .0);
         border:2px solid #FFF;
     }
+    
+    .expand-button:hover {
+        color:#9B909D;
+    }
+    
+    .expand-button:active, .expand-button:focus {
+        color:white;
+        outline:none !important;
+    }
+    
     
     </style>
 </head>
@@ -133,14 +157,9 @@
         
         <div class="expand-down">
             
-            
             <button class="btn expand-button" type="button" data-toggle="collapse" data-target="#expand" aria-expanded="false" aria-controls="expand">
                 <span class="glyphicon glyphicon-chevron-down"></span>
             </button>
-            
-            <!-- <a href="#upcoming">
-            <span class="glyphicon glyphicon-collapse-down expand-down-icon expand-it"></span>
-            <!-- </a> -->
             
         </div> <!-- end expand-down -->
         
@@ -187,27 +206,28 @@
             
             <!-- (1)  replace here and delete below-->
             
-            <div class="row">
+            <div class="well well-lg">
+            
+                <div class="row">
                 
-                <div class="col-md-4 box description-text">Director: Julie Whelan</div>
-                <div class="col-md-4 box description-text">Technical Director: Andrew Bean</div>
-                <div class="col-md-4 box description-text">Producer: Jenna Maida</div>
+                    <div class="col-md-4 box description-text">Director: Julie Whelan</div>
+                    <div class="col-md-4 box description-text">Technical Director: Andrew Bean</div>
+                    <div class="col-md-4 box description-text">Producer: Jenna Maida</div>
                 
+                </div>
+            
+                <br />
+            
+                <div class="row">
+                
+                    <div class="col-md-12 box description-text light-text">10/12 - 10/14</div>
+                
+                </div>
+            
             </div>
-            
-            <br />
-            
-            <div class="row">
-                
-                <div class="col-md-12 box description-text light-text">10/12 - 10/14</div>
-                
-            </div>
-            
-            <br />
             
             <!-- till here -->
             
-                
                 <div class="map-container">
                     
                     <div class="map-image"></div>
@@ -220,8 +240,29 @@
                         
                     </div>
                     
+                    <button class="btn map-button" type="button" data-toggle="modal" data-target="#map-modal"></button>
+                    
                 </div> <!-- end map-container -->
-            
+                
+                <div class="modal fade" id="map-modal" tabindex="-1" role="dialog" aria-labelledby="Google Maps">
+                    
+                    <div class="modal-dialog modal-lg" role="document">
+                        
+                        <div class="modal-content">
+                        
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                        
+                            <div class="modal-body">
+                                <div id="map"></div>
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                </div>
             
         </div> <!-- end container -->
         
@@ -234,14 +275,6 @@
         <div class="image-text-container">
             <p class="image-text">PHOTO HERE</p>
         </div>
-    
-        <div class="expand-down">
-            
-            <a href="#NRT">
-                <span class="glyphicon glyphicon-collapse-down expand-down-icon"></span>
-            </a>
-            
-        </div> <!-- end expand-down -->
         
     </div> <!-- end secondImage -->
     
@@ -266,7 +299,7 @@
             
             <div class="row">
                 
-                <div class="col-md-12 box description-text light-text">Will be coming</div>
+                <div class="col-md-12 box description-text light-text">Coming:</div>
                 
             </div>
             
@@ -297,106 +330,99 @@
         <div class="scroll-container">
         
             <div class="container">
+                
+                <div class="well well-lg">
             
                 <div class="scroller">
             
-                    <div class="scroll-div" data-toggle="modal" data-target="#modalOne">
+                        <div class="scroll-div" data-toggle="modal" data-target="#modalOne">
                 
-                        <div class="scroll-img" style="background-image:url('images/harm.jpg')"></div>
+                            <div class="scroll-img" style="background-image:url('images/harm.jpg')"></div>
                 
-                    </div> <!-- end scroll-Div -->
+                        </div> <!-- end scroll-Div -->
             
-                    <div class="modal fade" id="modalOne" tabindex="-1" role="dialog" aria-labelledby="modalOne">
+                        <div class="scroll-div">
                 
-                        <div class="modal-dialog" role="document">
-                    
-                            <div class="modal-content">
-                        
-                                <div class="modal-header">
-                            
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            
-                                    <h4 class="modal-title" id="Harmonies">Harmonies!</h4>
-                            
-                                </div> <!-- end modal-header -->
-                        
-                                <div class="modal-body">
-                            
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                            
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                                    <p>This is place holder text</p>
-                            
-                                </div> <!-- end modal-body --->
-                        
-                                <div class="modal-footer">
-                            
-                                    <button type="button" class="btn purple-btn" data-dismiss="modal">Close</button>
-                            
-                                </div> <!-- end modal-footer -->
-                        
-                            </div> <!-- modal-content -->
-                    
-                        </div> <!-- emd modal-dialog -->
+                            <div class="scroll-img" style="background-image:url('images/beauty.jpg')" ></div>
                 
-                    </div> <!-- end modal -->
+                        </div>
             
-                    <div class="scroll-div">
+                        <div class="scroll-div">
                 
-                        <div class="scroll-img" style="background-image:url('images/beauty.jpg')" ></div>
+                            <div class="scroll-img" style="background-image:url('images/rock.jpg')" ></div>
                 
-                    </div>
+                        </div>
             
-                    <div class="scroll-div">
+                        <div class="scroll-div">
                 
-                        <div class="scroll-img" style="background-image:url('images/rock.jpg')" ></div>
-                
-                    </div>
+                            <div class="scroll-img" style="background-image:url('images/itw.jpg')" ></div>
             
-                    <div class="scroll-div">
-                
-                        <div class="scroll-img" style="background-image:url('images/itw.jpg')" ></div>
+                        </div>
             
-                    </div>
+                        <div class="scroll-div">
             
-                    <div class="scroll-div">
+                            <div class="scroll-img" style="background-image:url('images/blonde.jpg')" ></div>
             
-                        <div class="scroll-img" style="background-image:url('images/blonde.jpg')" ></div>
+                        </div>
             
-                    </div>
+                        <div class="scroll-div">
             
-                    <div class="scroll-div">
+                            <div class="scroll-img" style="background-image:url('images/spam.png')" ></div>
             
-                        <div class="scroll-img" style="background-image:url('images/spam.png')" ></div>
-            
-                    </div>
+                        </div>
         
-                </div> <!-- scroller -->
+                    </div> <!-- scroller -->
+        
+                </div>
         
             </div> <!-- end container -->
         
         </div> <!-- end scroll-container -->
         
     </div> <!-- end description -->
+    
+    
+    <div class="modal fade" id="modalOne" tabindex="-1" role="dialog" aria-labelledby="modalOne">
+        
+        <div class="modal-dialog" role="document">
+            
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    
+                    <h4 class="modal-title" id="Harmonies">Harmonies!</h4>
+                    
+                </div> <!-- end modal-header -->
+                
+                <div class="modal-body">
+                    
+                    <p>This is place holder text</p>
+                    <p>This is place holder text</p>
+                    <p>This is place holder text</p>
+                    <p>This is place holder text</p>
+                    <p>This is place holder text</p>
+                    <p>This is place holder text</p>
+                    <p>This is place holder text</p>
+                    <p>This is place holder text</p>
+                    <p>This is place holder text</p>
+                    <p>This is place holder text</p>
+                    <p>This is place holder text</p>
+                    
+                </div> <!-- end modal-body --->
+                
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn purple-btn" data-dismiss="modal">Close</button>
+                    
+                </div> <!-- end modal-footer -->
+                
+            </div> <!-- modal-content -->
+            
+        </div> <!-- emd modal-dialog -->
+        
+    </div> <!-- end modal -->
     
     
     
@@ -408,15 +434,19 @@
         
         <div class="expand-down">
             
-            <span class="glyphicon glyphicon-collapse-down expand-down-icon expand-it-nrt"></span>
+            
+            <button class="btn expand-button" type="button" data-toggle="collapse" data-target="#expand-nrt" aria-expanded="false" aria-controls="expand">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </button>
             
         </div> <!-- end expand-down -->
         
     </div> <!-- end NRTImage -->
     
-    <div class="more-info-nrt">
-        
+    <div class="more-info" id="expand-nrt">
         <div class="container">
+        <div class="well well-sm">
+            
             
             <div class="row">
                 
@@ -432,8 +462,10 @@
                 
             </div>
             
-            <p class="more-info-p light-text">No refund theatre is like a sister club to The Penn State Thespians and another great way to get involved with theatre at Penn State!! For more information on their shows follow this link <a href="http://norefundtheatre.weebly.com/">here!</a></p>
+            <p class="more-info-p light-text">No refund theatre is like a sister club to The Penn State Thespians and another great way to get involved with theatre at Penn State!! For more information on their shows follow this link <a target="_blank" href="http://norefundtheatre.weebly.com/">here!</a></p>
             
+        
+        </div>
         </div>
         
     </div>
@@ -475,30 +507,19 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
+
     <script type="text/javascript">
-        
-        $(".expand-it").click(function() {
-             
-                              if($(".more-info:visible").length == 0) {
-                                    $(".more-info").show();
-                              }
-                              else {
-                                $(".more-info").hide();
-                              }
-                              
-        });
-        
-        $(".expand-it-nrt").click(function() {
-                              
-                              if($(".more-info-nrt:visible").length == 0) {
-                                    $(".more-info-nrt").show();
-                              }
-                              else {
-                                    $(".more-info-nrt").hide();
-                              }
-                              
-        });
-        
+        function initMap() {
+            var uluru = {lat: 40.796537, lng: -77.863743};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: uluru
+                });
+                var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
     </script>
     
     <script async defer
