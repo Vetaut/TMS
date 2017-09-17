@@ -54,16 +54,21 @@ body {
     width:100%;
 }
 
-.expand-down-icon {
-    padding:0;
-    margin:0;
-    font-size:2.5em;
-    color:rgba(248, 248, 248, .5);
+.expand-button {
+    border-radius:50%;
+    color:#FFF;
+    text-align:center;
+    background-color:rgba(255, 255, 255, .0);
+    border:2px solid #FFF;
 }
 
-.expand-down-icon:hover {
-    color:rgba(248, 248, 248, .8);
-    cursor:pointer;
+.expand-button:hover {
+    color:#9B909D;
+}
+
+.expand-button:active, .expand-button:focus {
+    color:white;
+    outline:none !important;
 }
 
 .more-info {
@@ -96,16 +101,6 @@ body {
     padding:5vh 0 0 0;
 }
 
-.more-info-nrt {
-    background-color:white;
-    overflow:auto;
-    border-top:.2vh solid #333333;
-    display:none;
-    height:35vh;
-    width:100%;
-    text-align:center;
-}
-
 .description {
     background-color:#FFFFFF;
     text-align:center;
@@ -123,11 +118,6 @@ body {
 
 .description-text-large h3 {
     font-size:2.5em;
-}
-
-.spaces {
-    display:inline-block;
-    width:3%;
 }
 
 .map-container {
@@ -151,7 +141,7 @@ body {
     background-position:center;
     background-size:200px 200px;
     position:absolute;
-    left:44.5vw;
+    left:44.5%;
     width:150px;
     height:150px;
 }
@@ -177,12 +167,17 @@ body {
     background-color:rgba(255, 255, 255, .0);
 }
 
-.map {
-    padding:0;
-    margin:0 auto;
-    border:1px solid black;
-    border-radius:50%;
-    background-image:url("images/mapSchwab.png");
+#map {
+    height:400px;
+    width:100%;
+}
+
+.map-button {
+    position:absolute;
+    left:44.5%;
+    width:150px;
+    height:150px;
+    background-color:rgba(255, 255, 255, .0);
 }
 
 .scroll-container {
@@ -201,6 +196,14 @@ body {
     margin:0 15px 0 15px;
 }
 
+.scroll-div:hover {
+    cursor:pointer;
+}
+
+.scroll-div:hover .scroll-img:before, .scroll-div:focus .scroll-img:before {
+    display:block;
+}
+
 .scroll-img {
     display:inline-block;
     width:100%;
@@ -217,22 +220,55 @@ body {
     transition: all .5s;
 }
 
-.scroll-div:hover {
-    cursor:pointer;
-}
-
 @media only screen and (max-width: 768px) {
-    .map {
-        width:50px;
-        height:50px;
-    }
+
 }
 
-@media only screen and (min-width: 768px) {
-    .map {
-        height:75px;
-        width:75px;
+@media only screen and (max-width: 992px) {
+
+    .map-blocker {
+        background-image:url("images/map-mask.png");
+        background-position:center;
+        background-size:120px 120px;
+        position:absolute;
+        left:44.5%;
+        width:150px;
+        height:150px;
     }
+
+    .map-image {
+        background-image:url("images/penn.png");
+        background-position:center;
+        background-size:200px 200px;
+        position:absolute;
+        left:44.5%;
+        width:150px;
+        height:150px;
+    }
+
+    .marker-container {
+        width:150px;
+        height:150px;
+        position:absolute;
+        left:44.5%;
+    }
+
+    .map-button {
+        position:absolute;
+        left:44.5%;
+        width:150px;
+        height:150px;
+        background-color:rgba(255, 255, 255, .0);
+    }
+
+    .map-button {
+        position:absolute;
+        left:44.5%;
+        width:150px;
+        height:150px;
+        background-color:rgba(255, 255, 255, .0);
+    }
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -246,16 +282,6 @@ body {
         opacity:1;
     }
     
-    .map {
-        height:100px;
-        width:100px;
-    }
-}
-
-.scroll-div:hover .scroll-img:before, .scroll-div:focus .scroll-img:before {
-    display:block;
-}
-
 }
 
 @keyframes fadein {
