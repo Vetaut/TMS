@@ -125,9 +125,14 @@
     background-image: none;
 }
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 767px) {
     #topbar {
         height:50px;
+    }
+    
+    .navbar-default .navbar-nav {
+        height:100%;
+        /* background-color:black; */
     }
     
     .navbar-default .navbar-header .navbar-brand > img{
@@ -141,6 +146,26 @@
         display:none;
     }
     
+    .navbar-default .navbar-nav > li {
+        margin:5px 0 5px 0;
+        border-radius:10%;
+    }
+    
+    .navbar-collapse {
+        background-color:rgba(155, 144, 157, .92);
+    }
+    
+    .navbar-center {
+        position:relative;
+        left:.03vw;
+        margin:0 auto;
+    }
+    
+    .sign-in-btn {
+        width:100px;
+        position:relative;
+        margin:0 auto;
+    }
     
     .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
         width:100%;
