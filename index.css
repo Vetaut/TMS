@@ -41,6 +41,10 @@ body {
     animation: fadein 5s;
 }
 
+#main {
+    background-image:url("images/Drowsy.png");
+}
+
 #upcoming {
     background-image:url("images/Awake.png");
 }
@@ -67,6 +71,16 @@ body {
 }
 
 .expand-down {
+    position:relative;
+    background:none;
+    padding:0;
+    margin:0;
+    top:85vh;
+    text-align:center;
+    width:100%;
+}
+
+.expand-fix {
     position:relative;
     background:none;
     padding:0;
@@ -276,6 +290,24 @@ body {
     .map-container {
         height:130px;
         margin-bottom:2%;
+    }
+}
+
+@media only screen and (max-width: 441px){
+    .expand-fix {
+        top:32vh;
+    }
+}
+
+@media only screen and (max-width: 684px) and (min-width: 441px){
+    .expand-fix {
+        top:45vh;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 684px){
+    .expand-fix {
+        top:60vh;
     }
 }
 
