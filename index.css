@@ -1,6 +1,7 @@
 body {
     position:relative;
     background-color:black;
+    font-family:'Lato', sans-serif;
     
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -9,25 +10,64 @@ body {
     animation: fadein 2s;
 }
 
+.italic-text {
+    font-style:italic;
+}
+
+.light-text{
+    font-weight:lighter;
+}
+
+.bold-text {
+    font-weight:bold;
+}
+
+.container {
+    background-color:white;
+}
+
 .image {
-    background-color:#5900b3;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
     width:100%;
     height:100vh;
     color:white;
+    
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 5s; /* Firefox < 16 */
+    -ms-animation: fadein 5s; /* Internet Explorer */
+    -o-animation: fadein 5s; /* Opera < 12.1 */
+    animation: fadein 5s;
+}
+
+#main {
+    background-image:url("images/Drowsy.png");
+}
+
+#upcoming {
+    background-image:url("images/Awake.png");
+}
+
+#other {
+    background-image:url("images/hpc.png");
 }
 
 .image-text-container {
     width:100%;
     position:relative;
-    top:50%;
+    top:30%;
     text-align:center;
     margin:0;
     padding:0;
 }
 
 .image-text {
+    font-family:'Lato', sans-serif;
     margin:0;
     padding:0;
+    display:none;
+    font-size:5em;
 }
 
 .expand-down {
@@ -40,50 +80,67 @@ body {
     width:100%;
 }
 
-.expand-down-icon {
+.expand-fix {
+    position:relative;
+    background:none;
     padding:0;
     margin:0;
-    font-size:2.5em;
-    color:rgba(248, 248, 248, .5);
+    top:85vh;
+    text-align:center;
+    width:100%;
 }
 
-.expand-down-icon:hover {
-    color:rgba(248, 248, 248, .8);
-    cursor:pointer;
+.expand-button {
+    border-radius:50%;
+    color:#FFF;
+    text-align:center;
+    background-color:rgba(255, 255, 255, .0);
+    border:2px solid #FFF;
+}
+
+.expand-button:hover {
+    color:#9B909D;
+}
+
+.expand-button:active, .expand-button:focus {
+    color:white;
+    outline:none !important;
 }
 
 .more-info {
     overflow:auto;
+    background-color:white;
     border-top:.2vh solid #333333;
+    padding-top:2vh;
     display:none;
-    height:35vh;
     width:100%;
     text-align:center;
 }
 
+.more-info-header {
+    text-align:center;
+    font-size:2em;
+    font-weight:bold;
+    padding:0 0 0 0;
+
+}
+
 .more-info-text {
+    text-align:center;
     font-size:1.8em;
     padding:2vh 0 0 0;
 }
 
 .more-info-p {
+    text-align:center;
     font-size:1.3em;
     padding:5vh 0 0 0;
-}
-
-.more-info-nrt {
-    overflow:auto;
-    border-top:.2vh solid #333333;
-    display:none;
-    height:35vh;
-    width:100%;
-    text-align:center;
 }
 
 .description {
     background-color:#FFFFFF;
     text-align:center;
-    border-top:.2vh solid #333333;
+    border-top:.2vh solid #EEEEEE;
     border-bottom:.2vh solid #333333;
 }
 
@@ -99,22 +156,67 @@ body {
     font-size:2.5em;
 }
 
-.spaces {
-    display:inline-block;
-    width:3%;
-}
-
 .map-container {
     width:100%;
+    height:150px;
     margin-bottom:2%;
 }
 
-.map {
-    padding:0;
+.map-blocker {
+    background-image:url("images/map-mask.png");
+    background-position:center;
+    background-size:120px 120px;
+    position:relative;
     margin:0 auto;
-    border:1px solid black;
-    border-radius:50%;
-    background-image:url("images/mapSchwab.png");
+    bottom:150px;
+    width:150px;
+    height:150px;
+}
+
+.map-image {
+    background-image:url("images/penn.png");
+    background-position:center;
+    background-size:200px 200px;
+    position:relative;
+    margin:0 auto;
+    width:150px;
+    height:150px;
+}
+
+.map-marker {
+    color:#F7584C;
+    font-size:3em;
+    padding-top:28px;
+}
+
+.marker-container {
+    width:150px;
+    height:150px;
+    position:relative;
+    bottom:300px;
+    margin:0 auto;
+}
+
+.map-button {
+    position:relative;
+    margin:0 auto;
+    bottom:450px;
+    width:150px;
+    height:150px;
+    background-color:rgba(255, 255, 255, .0);
+}
+
+#map {
+    height:400px;
+    width:100%;
+}
+
+.map-button {
+    position:relative;
+    margin:0 auto;
+    width:150px;
+    height:150px;
+    background-color:rgba(255, 255, 255, .0);
 }
 
 .scroll-container {
@@ -133,6 +235,14 @@ body {
     margin:0 15px 0 15px;
 }
 
+.scroll-div:hover {
+    cursor:pointer;
+}
+
+.scroll-div:hover .scroll-img:before, .scroll-div:focus .scroll-img:before {
+    display:block;
+}
+
 .scroll-img {
     display:inline-block;
     width:100%;
@@ -149,21 +259,80 @@ body {
     transition: all .5s;
 }
 
-.scroll-div:hover {
-    cursor:pointer;
-}
 
-@media only screen and (max-width: 768px) {
-    .map {
-        width:50px;
-        height:50px;
+@media only screen and (max-width: 992px) {
+   
+   .marker-container {
+        width:130px;
+        height:130px;
+        bottom:260px;
+    }
+    
+    .map-button {
+        bottom:390px;
+        width:130px;
+        height:130px;
+    }
+    
+    .map-blocker {
+        background-size:100px 100px;
+        bottom:130px;
+        width:130px;
+        height:130px;
+    }
+    
+    .map-image {
+        background-size:200px 200px;
+        width:130px;
+        height:130px;
+    }
+    
+    .map-container {
+        height:130px;
+        margin-bottom:2%;
     }
 }
 
-@media only screen and (min-width: 768px) {
-    .map {
-        height:75px;
-        width:75px;
+@media only screen and (max-width: 441px){
+    .expand-fix {
+        top:32vh;
+    }
+}
+
+@media only screen and (max-width: 684px) and (min-width: 441px){
+    .expand-fix {
+        top:45vh;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 684px){
+    .expand-fix {
+        top:60vh;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #upcoming {
+        background-image:url("images/CAwake.png");
+    }
+    
+    #other {
+        background-image:url("images/Chpc.png");
+        background-position:30%;
+    }
+    
+    .image-text {
+        display:inline;
+    }
+}
+
+@media only screen and (max-width: 1235px) and (min-width: 768px){
+    #upcoming{
+        background-size:100% 100vh;
+    }
+    
+    #other {
+        background-size:100% 100vh;
     }
 }
 
@@ -178,16 +347,6 @@ body {
         opacity:1;
     }
     
-    .map {
-        height:100px;
-        width:100px;
-    }
-}
-
-.scroll-div:hover .scroll-img:before, .scroll-div:focus .scroll-img:before {
-    display:block;
-}
-
 }
 
 @keyframes fadein {
