@@ -1,7 +1,7 @@
 #topbar {
     height:70px;
-    background-color:rgba(155, 144, 157, .92);
-    border-color:rgba(155, 144, 157, .92);
+    background-color:rgba(155, 144, 157, .75);
+    border-color:rgba(155, 144, 157, .95);
     font-family: 'Lato', sans-serif;
     font-size:1.4em;
     
@@ -123,6 +123,23 @@
 .purple-btn.active,
 .open .dropdown-toggle.purple-btn {
     background-image: none;
+}
+
+@media (min-width: 768px) and (max-width: 930px) {
+    .navbar-collapse.collapse {
+        display:none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display:block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        position:relative;
+        top:10px;
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
 }
 
 @media only screen and (max-width: 767px) {
