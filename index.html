@@ -64,11 +64,13 @@
             <div class="collapse navbar-collapse navbar-center-container" id="data-spy">
                     
                 <ul class="nav navbar-nav navbar-center">
-                        
-                    <li><a href="#upcoming">Upcoming</a></li>
-                    <li><a href="about.html">About</a></li>
+                    
+                    <li><a href="outreach.html">Outreach</a></li>
                     <li><a target="_blank" href="http://giveto.psu.edu/s/1218/thon/2014/p2p.aspx?sid=1218&gid=3&pgid=1135">THON</a></li>
+                    <li><a href="#upcoming">Upcoming</a></li>
                     <li><a href="#other">Children's Show</a></li>
+                    <li><a href="about.html">About</a></li>
+                    
                     
                 </ul>
                     
@@ -125,7 +127,7 @@
         <div class="expand-down">
                 
             <button class="btn expand-button" type="button" data-toggle="collapse" data-target="#expand" aria-expanded="false" aria-controls="expand">
-                <span class="glyphicon glyphicon-chevron-down"></span>
+                <span class="glyphicon glyphicon-chevron-down down"></span>
             </button>
                 
         </div> <!-- end expand-down -->
@@ -154,7 +156,7 @@
                     <div class="col-md-3 box more-info-text">Kyle Chiavetta</div>
                         
                 </div>
-                    
+                
                 <p class="more-info-p light-text">The curtain rises on a present-day musical theatre fanatic eager to tell you about her favorite Broadway musical -- "The Drowsy Chaperone." She's the ultimate fan and "Drowsy" is her guilty pleasure.
                     
                     As she begins listening to the rare cast recording, the show cleverly and magically blooms to life, telling the hilarious tale of a pampered Broadway starlet and her debonair fiance, an overzealous producer, a dizzy chorine, the Latin lover and a couple of bumbling gangsters. Ruses are played. Hi-jinks occur. And the plot spins everyone into musical comedy euphoria.</p>
@@ -204,16 +206,14 @@
         <div class="map-container">
                 
             <div class="map-image"></div>
-                
-            <div class="map-blocker"></div>
-                
-            <div class="marker-container">
-                    
+            
+            <button class="btn map-button" type="button" data-toggle="modal" data-target="#map-modal">
+            <div class="map-blocker">
                 <span class="glyphicon glyphicon-map-marker map-marker"></span>
-                    
             </div>
+            </button>
                 
-            <button class="btn map-button" type="button" data-toggle="modal" data-target="#map-modal"></button>
+            
                 
         </div> <!-- end map-container -->
             
@@ -435,6 +435,8 @@
                     
                 <p class="more-info-p light-text">Come write with Children's Show every Thursday at 5 pm and help us create a world of make-believe for the children of State College. Afterward, join our crew to put on the show in Schlow Library. For any questions, contact the Children's Show chairs at thespianschildrensshow@gmail.com. </p>
                 
+                <br />
+                
             </div> <!-- end well -->
             
         </div> <!-- end container -->
@@ -483,7 +485,7 @@
 </body>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
     
@@ -499,8 +501,14 @@
                                         map: map
                                         });
     }
+
 </script>
-    
+
+<script>
+
+
+</script>
+
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaA7Tyd1lQbBY5mFtBJcM8qWxozahjIC8&callback=initMap">
 </script>
