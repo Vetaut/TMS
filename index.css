@@ -167,10 +167,25 @@ body {
     background-position:center;
     background-size:120px 120px;
     position:relative;
-    margin:0 auto;
-    bottom:150px;
+    right:13px;
+    bottom:7px;
     width:150px;
     height:150px;
+}
+
+.map-blocker:hover {
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {background-size: 140px 140px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {background-size: 140px 140px;}
 }
 
 .map-image {
@@ -193,32 +208,23 @@ body {
     width:150px;
     height:150px;
     position:relative;
-    bottom:300px;
+    bottom:150px;
     margin:0 auto;
 }
 
 .map-button {
     position:relative;
     margin:0 auto;
-    bottom:450px;
+    bottom:150px;
     width:150px;
     height:150px;
-    background-color:rgba(255, 255, 255, .0);
+    background-color:rgba(0, 0, 0, 0);
 }
 
 #map {
     height:400px;
     width:100%;
 }
-
-.map-button {
-    position:relative;
-    margin:0 auto;
-    width:150px;
-    height:150px;
-    background-color:rgba(255, 255, 255, .0);
-}
-
 .scroll-container {
     margin:20px 0 20px 0;
 }
@@ -261,24 +267,21 @@ body {
 
 
 @media only screen and (max-width: 992px) {
-   
-   .marker-container {
-        width:130px;
-        height:130px;
-        bottom:260px;
-    }
-    
     .map-button {
-        bottom:390px;
+        bottom:130px;
         width:130px;
         height:130px;
     }
     
     .map-blocker {
         background-size:100px 100px;
-        bottom:130px;
         width:130px;
         height:130px;
+    }
+    
+    .map-blocker:hover {
+        -webkit-animation: mymove 0s infinite; /* Chrome, Safari, Opera */
+        animation: mymove 0s infinite;
     }
     
     .map-image {
@@ -290,6 +293,10 @@ body {
     .map-container {
         height:130px;
         margin-bottom:2%;
+    }
+    
+    .map-marker {
+        font-size:2.5em;
     }
 }
 
