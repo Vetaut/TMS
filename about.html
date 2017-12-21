@@ -17,24 +17,15 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
+    
     <link href="navBar.css" type="text/css" rel="stylesheet">
+    <link href="about.css" type="text/css" rel="stylesheet">
     
     <style>
-        
-        .half-screen {
-            position:absolute;
-            width:50%;
-            height:250px;
-            background-color:gray;
-        }
     
-        .tester {
-            width:100%;
-            height:100vh;
-            background-color:purple;
-        }
-    
-    </style>
+</style>
+
 </head>
 
 <body data-spy="scroll" data-target="#data-spy">
@@ -44,38 +35,42 @@
         <div class="container-fluid">
             
             <div class="navbar-header">
-            
-                <a href="index.html" class="navbar-brand">Thespians</a>
-            
+                
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="images/logo.png">
+                        </a>
+                
+                <a href="index.html#main" class="navbar-brand" id="title">Thespians</a>
+                
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                
-                <span class="sr-only">Toggle Navigation</span>
-                
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            
-            </div> <!-- end navbar-header -->
+                    
+                    <span class="sr-only">Toggle Navigation</span>
+                    
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    
+                    </div> <!-- end navbar-header -->
             
             <div class="collapse navbar-collapse navbar-center-container" id="data-spy">
-            
-                    
-                    <ul class="nav navbar-nav navbar-center">
-            
-                        <li><a href="">About</a></li>
-                        <li><a target="_blank" href="http://giveto.psu.edu/s/1218/thon/2014/p2p.aspx?sid=1218&gid=3&pgid=1135">THON</a></li>
-                        <li><a href="index.html#upcoming">Upcoming</a></li>
-                        <li><a href="index.html#NRT">NRT&nbsp;</a></li>
-                        <li><a href="">Store</a></li>
-            
-                    </ul>
                 
+                <ul class="nav navbar-nav navbar-center">
+                    
+                    <li><a href="outreach.html">Outreach</a></li>
+                    <li><a target="_blank" href="http://giveto.psu.edu/s/1218/thon/2014/p2p.aspx?sid=1218&gid=3&pgid=1135">THON</a></li>
+                    <li><a href="index.html#upcoming">Upcoming</a></li>
+                    <li><a href="index.html#other">Children's Show</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li id="no-display"><a href="contact.html">Contact</a></li>
+                    
+                    
+                </ul>
                 
                 <ul class="nav navbar-nav navbar-right">
                     
-                    <li class="dropdown">
+                    <li class="dropdown sign-in-drop">
                         
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign In <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle sign-in-btn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign In <span class="caret"></span></a>
                         
                         <div class="dropdown-menu">
                             
@@ -83,9 +78,9 @@
                                 
                                 <div class="form-group dropdown-form">
                                     
-                                <label for="email">Email:</label>
-                                <input type="email" class="form-control" name="email"></input>
-                                
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" name="email"></input>
+                                    
                                 </div>
                                 
                                 <div class="form-group dropdown-form">
@@ -95,7 +90,7 @@
                                     
                                 </div>
                                 
-                                <div class="form-group" id="loginBtn">
+                                <div class="form-group" id="login-btn">
                                     
                                     <input type="submit" value="Log In" class="btn purple-btn" name="login"></input>
                                     
@@ -103,21 +98,299 @@
                                 
                             </form>
                             
-                        </div>
+                        </div> <!-- end dropdowm-menu -->
                         
-                    </li>
+                    </li> <!-- end dropdown -->
                     
                 </ul>
                 
-            </div> <!-- end collapse left -->
+            </div> <!-- end collapse -->
             
-        </div> <!-- container -->
+        </div> <!-- container-fluid -->
         
     </div> <!-- navbar -->
     
-    <div class="tester">
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" id="bot-bar">
+        
+        <p class="navbar-text navbar-right" id="contact"><a href="contact.html">Contact Us</a></p>
+        <a href="https://www.facebook.com/psuthespians/" target="_blank"><img src="images/fb.png" class="navbar-social navbar-right" id="contact"></img></a>
+        <a href="https://twitter.com/psuthespians" target="_blank"><img src="images/twitter.svg" class="navbar-social navbar-right" id="contact"></img></a>
+        <!-- NEEDS TO BE A DIFFERENT LOGO!!! -->
+        <a href="https://www.instagram.com/psuthespians/" target="_blank"><img src="images/IG.png" class="navbar-social navbar-right" id="contact"></img></a>
+        
+    </nav>
+    
+    <div class="container-fluid">
+        
+        <div class="head-div">
+            
+            <div class="row">
+                
+                <div class="col-md-12 box head-text">We Are...</div>
+                <div class="col-md-12 box head-text">The Penn State Thespians!</div>
+                
+            </div>
+            
+            <hr style="border-color:#7c5483" />
+            
+            <div class="row">
+                
+                <div class="col-md-12 box support-text">Thespians is the oldest, continuously running student organization on campus. Every year, we present a number of student-run productions, including two main stage musicals, a children's show each semester, and an annual cabaret.</div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="breaker-div">
+            
+            <div class="breaker-line"></div>
+            
+        </div>
+        
+        <div class="holder">
+            
+            <div class="row">
+                
+                <div class="col-md-12 box">
+                
+                    <div class="parent-image parent-image-odd">
+                
+                        <a href="history.html"> <div class="image image-odd" style="background-image:url('images/schwab.png')"> </div> </a>
+                    
+                    </div>
+                
+                    <div class="parent-description parent-description-odd">
+                
+                        <div class="description description-odd">
+                    
+                            <a href="history.html" class="title-a"><h3 class="title-text">Our History</h3></a>
+                        
+                            <p class="description-text">Now in our 120th anniversary season, our club is dedicated to producing quality theatre for the community.</p>
+                        
+                            <p class="arrow-more">
+                                <a href="history.html"> <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> </a>
+                                </p>
+                        
+                    
+                        </div>
+                    
+                    </div>
+                
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div "float-break"></div>
+        
+        <div class="holder">
+            
+            <div class="row">
+                
+                <div class="col-md-12 box">
+                    
+                    <div class="parent-image parent-image-even" id="hide-large">
+                        
+                        <a href="community.html"> <div class="image image-even" style="background-image:url('images/com.png')"> </div> </a>
+                        
+                    </div>
+                    
+                    <div class="parent-description parent-description-even">
+                    
+                        <div class="description description-even">
+                        
+                            <a href="community.html"> <h3 class="title-text title-text-even">Community Involvement</h3> </a>
+                        
+                            <p class="description-text description-text-even">Thespians is proud to give back to the community through our children's show, MasquerAIDS, and THON&trade;. It is part of our mission to be an active member of our local community.</p>
+                        
+                            <p class="arrow-more arrow-more-even">
+                            <a href="community.html"> <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> </a>
+                            </p>
+                        
+                        </div>
+                    
+                    </div>
+
+                    <div class="parent-image parent-image-even" id="hide-small">
+                        
+                        <a href="community.html"> <div class="image image-even" style="background-image:url('images/com.png')"> </div> </a>
+                    
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div "float-break"></div>
+        
+        <div class="holder">
+            
+            <div class="row">
+                
+                <div class="col-md-12 box">
+                    
+                    <div class="parent-image parent-image-odd">
+                    
+                        <a href="involve.html"> <div class="image image-odd" style="background-image:url('images/funCast.png')"> </div> </a>
+                    
+                    </div>
+                    
+                    <div class="parent-description parent-description-odd">
+                    
+                        <div class="description description-odd">
+                        
+                            <a href="involve.html" class="title-a"> <h3 class="title-text">Get Involved</h3> </a>
+                        
+                            <p class="description-text">Become a member of The Penn State Thespians through our main stage productions, children's show, MasquerAIDS, and more! We're always excited to see new faces in club. </p>
+                        
+                            <p class="arrow-more">
+                                <a href="involve.html"> <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> </a>
+                                </p>
+                        
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <br />
+        
+        <br />
+    
+        </div>
         
     </div>
+    
+    <!--
+    
+    <div class="well">
+        
+        <div class="breaker-div">
+            
+            <div class="breaker-line"></div>
+            
+        </div>
+        
+        <div> <!-- latest updates div
+            
+            <h3 class="late-up"> Latest Updates </h3>
+            
+            <br />
+            
+            <div class="center-scroller">
+            
+            <div class="scroller">
+                
+                <div class="something">
+                    
+                    <div class="grouper">
+                        
+                        <div class="social-update">
+                            
+                            <h3 class="description-update-header" style="color:white">Stay Connected!</h3>
+                            
+                            <div class="divider" style="background-color:white"></div>
+                            
+                            
+                            <p class="description-update-text" style="color:white">Find us on Facebook as The Penn State Thespians and on Twitter and Instagram @psuthespians. We'll help you keep up with the latest updates!</p>
+                            
+                            <br />
+                            
+                            <div class="parent-logo">
+                                    
+                                <a target="_blank"href="https://twitter.com/psuthespians"> <img src="images/twitter.svg" class="social-logo"></img> </a>
+                                
+                                    
+                                <a target="_blank" href="https://www.facebook.com/psuthespians/"> <img src="images/fb.png" class="social-logo"></img> </a>
+                                
+                                    
+                                <a target="_blank" href="https://www.instagram.com/psuthespians/"> <img src="images/insta.png" class="social-logo"></img> </a>
+                                    
+                                
+                            </div>
+                            
+                        </div> <!-- social-update end
+                        
+                    </div> <!-- grouper end
+                    
+                </div>
+                
+                <div class="something">
+                
+                <div class="grouper">
+                    
+                    <div class="image-update" style="background-image:url('images/maids.png')"></div>
+                    
+                    <div class="description-update">
+                        
+                        <h3 class="description-update-header"> Maids Auditions </h3>
+                        
+                        <div class="divider"></div>
+                        
+                        <p class="description-update-text"> Come out and Audition for Maids! They already happened but whatev's</p>
+                        
+                    </div> <!-- description update end
+                            
+                </div> <!-- grouper end
+                
+                </div>
+                
+                <div class="something">
+                
+                <div class="grouper">
+                    
+                    <div class="image-update" style="background-image:url('images/cshow.png');"></div>
+                    
+                    <div class="description-update">
+                        
+                        <h3 class="description-update-header"> C-Show Auditions </h3>
+                        
+                        <div class="divider"></div>
+                        
+                        <p class="description-update-text"> Auditions are this week. Wednesday and Thursday I think</p>
+                        
+                    </div> <!-- description update end
+                            
+                </div> <!-- grouper end
+                
+                </div>
+                
+                <div class="something">
+                
+                <div class="grouper">
+                    
+                    <div class="image-update" style="background-image:url('images/mac.png');"></div>
+                    
+                    <div class="description-update">
+                        
+                        <h3 class="description-update-header"> Mac and Cheese Dinner </h3>
+                        
+                        <div class="divider"></div>
+                        
+                        <p class="description-update-text"> Some thon fundraiser come out and support!</p>
+                        
+                    </div> <!-- description update end
+                            
+                </div> <!-- grouper end
+                
+                </div>
+                
+            </div> <!-- scroller
+            
+            </div>
+        
+        </div> <!-- latest updates end 
+        
+        <br />
+        
+    </div> <!-- well end -->
     
 </body>
 
@@ -127,7 +400,121 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-        
+
     </script>
 
 </html>
+
+
+<!--
+ <div class="container">
+ 
+ <div class="row">
+ 
+ <div class="col-md-3 box">
+ 
+ <div class="grouper align-center">
+ 
+ <div class="social-update">
+ 
+ <h3 class="description-update-header" style="color:white">Stay Connected!</h3>
+ 
+ <div class="divider" style="background-color:white"></div>
+ 
+ <p class="description-update-text" style="color:white">Find us on Facebook as The Penn State Thespians and on Twitter and Instagram @psuthespians. We'll help you keep up with the latest updates!</p>
+ 
+ <br />
+ 
+ <div class="row">
+ 
+ <div class="col-md-4 box">
+ 
+ <a target="_blank"href="https://twitter.com/psuthespians"> <img src="images/twitter.svg" class="social-logo"></img> </a>
+ 
+ </div>
+ 
+ <div class="col-md-4 box">
+ 
+ <a target="_blank" href="https://www.facebook.com/psuthespians/"> <img src="images/fb.png" class="social-logo"></img> </a>
+ 
+ </div>
+ 
+ <div class="col-md-4 box">
+ 
+ <a target="_blank" href="https://www.instagram.com/psuthespians/"> <img src="images/insta.png" class="social-logo"></img> </a>
+ 
+ </div>
+ 
+ </div>
+ 
+ </div> <!-- social-update end
+
+</div> <!-- grouper end
+
+</div> <!-- col-md-3 end
+
+<div class="col-md-3 box">
+    
+    <div class="grouper align-center">
+        
+        <div class="image-update" style="background-image:url('images/maids.png')"></div>
+        
+        <div class="description-update">
+            
+            <h3 class="description-update-header"> Maids Auditions </h3>
+            
+            <div class="divider"></div>
+            
+            <p class="description-update-text"> Come out and Audition for Maids! They already happened but whatev's</p>
+            
+        </div> <!-- description update end
+        
+    </div> <!-- grouper end
+    
+</div> <!-- col-md-3 end
+
+<div class="col-md-3 box">
+    
+    <div class="grouper align-center">
+        
+        <div class="image-update" style="background-image:url('images/cshow.png');"></div>
+        
+        <div class="description-update">
+            
+            <h3 class="description-update-header"> C-Show Auditions </h3>
+            
+            <div class="divider"></div>
+            
+            <p class="description-update-text"> Auditions are this week. Wednesday and Thursday I think</p>
+            
+        </div> <!-- description update end
+        
+    </div> <!-- grouper end
+    
+</div> <!-- col-md-3 end
+
+<div class="col-md-3 box">
+    
+    <div class="grouper align-center">
+        
+        <div class="image-update" style="background-image:url('images/mac.png');"></div>
+        
+        <div class="description-update">
+            
+            <h3 class="description-update-header"> Mac and Cheese Dinner </h3>
+            
+            <div class="divider"></div>
+            
+            <p class="description-update-text"> Some thon fundraiser come out and support!</p>
+            
+        </div> <!-- description update end
+        
+    </div> <!-- grouper end
+    
+</div> <!-- col-md-3 end
+
+</div> <!-- row end
+
+</div> <!-- container end
+ 
+ -->

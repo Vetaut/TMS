@@ -1,0 +1,368 @@
+body {
+    background-color:#FFF;
+    font-family:'Lato', sans-serif;
+}
+
+.light-text {
+    font-weight:lighter;
+}
+
+.bold-text {
+    font-weight:bold;
+}
+
+.italic-text {
+    font-style:italic;
+}
+
+.half-screen {
+    position:absolute;
+    width:50%;
+    height:250px;
+    background-color:gray;
+}
+
+.head-div {
+    margin:0 auto;
+    margin-top:100px;
+    width:75%;
+    text-align:center;
+}
+
+.head-text {
+    font-weight:lighter;
+    font-size:2em;
+}
+
+.support-text {
+    font-weight:lighter;
+    font-size:1.4em;
+}
+
+.breaker-div {
+    margin-top:30px;
+    margin-bottom:30px;
+    width:100%;
+    height:75px;
+}
+
+.breaker-line {
+    position:relative;
+    top:5px;
+    margin:0 auto;
+    width:1px;
+    height:65px;
+    background-color:#7c5483;
+}
+
+.parent-image {
+    position:relative;
+    width:50%;
+    height:0;
+    padding-bottom:25%;
+}
+
+.image {
+    position:absolute;
+    background-image:url("images/Drowsy.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    box-shadow:1px 1px 10px #ccc;
+    border:1px solid #ccc;
+    border-radius:0.7%;
+    width:100%;
+    height:100%;
+}
+
+.image:hover {
+    opacity:.9;
+}
+
+.parent-image-odd {
+    float:left;
+}
+
+.image-odd {
+    float:left;
+}
+
+.parent-image-even {
+    float:right;
+}
+
+.image-even {
+    float:right;
+}
+
+#hide-large {
+    display:none;
+}
+
+.parent-description {
+    position:relative;
+    height:0;
+    width:40%;
+    padding-bottom:25%;
+}
+
+.description {
+    position:absolute;
+    height:100%;
+    width:100%;
+}
+
+.parent-description-odd {
+    float:right;
+}
+
+.description-odd {
+    margin-left:-15%;
+}
+
+.parent-description-even {
+    float:left;
+}
+
+.description-even {
+    margin-left:15%;
+}
+
+.title-text {
+    margin-top:20%;
+    font-size:2em;
+    color:#7c5483;
+}
+
+.title-a:hover {
+    cursor:pointer;
+    color:#7c5483;
+}
+
+.title-text-even {
+    color:#4c3350;
+    float:right;
+    text-decoration:inherit;
+}
+
+.title-a-even:hover {
+    color:#4c3350;
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+.description-text {
+    font-weight:lighter;
+}
+
+.description-text-even {
+    float:right;
+    text-align:right;
+}
+
+.arrow-more {
+    font-size:20px;
+    font-weight:lighter;
+    color:#7c5483;
+}
+
+.arrow-more a {
+    color:#7c5483;
+}
+
+.arrow-more-even {
+    float:right;
+    color:#4c3350;
+}
+
+.arrow-more-even a {
+    color:#4c3350;
+}
+
+.float-break {
+    float:clear;
+}
+
+.late-up {
+    text-align:center;
+    font-weight:lighter;
+    size:2em;
+    color:#7c5483;
+}
+
+.grouper {
+    margin:0 25px 0 25px;
+    height:325px;
+    width:250px;
+    box-shadow:3px 3px 10px #ccc;
+}
+
+.social-update {
+    width:100%;
+    height:100%;
+    border:0.3px solid #ccc;
+    border-bottom:1px solid #808080;
+    background-color:#7c5483;
+}
+
+.parent-logo {
+    position:relative;
+    top:70px;
+    width:325px;
+}
+
+.social-logo {
+    margin:0 20px 0 20px;
+    width:40px;
+    height:40px;
+    border-radius:10%;
+}
+
+.image-update {
+    width:100%;
+    height:40%;
+    border:0.3px solid #ccc;
+    border-bottom:1px solid #808080;
+    background-image:url("images/roa.png");
+    background-position:center;
+    background-size:100%;
+    background-repeat:no-repeat;
+}
+
+.description-update {
+    background-color:#fff;
+    border:0.3px solid #ccc;
+    border-top:1px solid #808080;
+    height:60%;
+}
+
+.description-update-header {
+    margin-left:5%;
+    font-size:1.2em;
+    color:#7c5483;
+}
+
+.divider {
+    height:2px;
+    width:15%;
+    margin-left:5%;
+    background-color:#7c5483;
+}
+
+.description-update-text {
+    width:200px;
+    margin-left:5%;
+    margin-top:5%;
+    font-weight:lighter;
+    overflow:initial;
+    white-space:initial;
+}
+
+.center-scroller {
+    width:100%;
+}
+
+.scroller {
+    overflow:auto;
+    white-space:nowrap;
+}
+
+.something {
+    display:inline-block;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px){
+    .parent-image {
+        padding-bottom:30%;
+    }
+    
+    .image {
+        height:132%;
+    }
+    
+    .parent-description {
+        padding-bottom:40%;
+    }
+    
+    .description {
+        height:125%;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .parent-image {
+        position:relative;
+        width:95%;
+        height:0;
+        padding-bottom:35%;
+    }
+    
+    .image {
+        position:absolute;
+        width:100%;
+        height:115%;
+    }
+    
+    .parent-image-odd {
+        margin-left:-5%;
+        float:none;
+    }
+    
+    .image-odd {
+        float:none;
+    }
+    
+    #hide-large {
+        display:block;
+    }
+    
+    #hide-small {
+        display:none;
+    }
+    
+    .parent-image-even {
+        margin-left:10%;
+        float:none;
+    }
+    
+    .image-even {
+        float:none;
+    }
+    
+    .parent-description {
+        position:relative;
+        height:0;
+        width:90%;
+        padding-bottom:30%;
+        margin-bottom:25%;
+    }
+    
+    .description {
+        position:absolute;
+        height:100%;
+        width:100%;
+    }
+    
+    .parent-description-odd {
+        float:none;
+    }
+    
+    .description-odd {
+        margin-left:0%;
+    }
+    
+    .parent-description-even {
+        float:none;
+    }
+    
+    .description-even {
+        margin-left:10%;
+    }
+}
+
+@media only screen and (max-width: 423px) {
+    .parent-description {
+        margin-bottom:35%;
+    }
+}

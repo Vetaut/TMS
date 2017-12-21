@@ -1,0 +1,288 @@
+/* General CSS*/
+
+body {
+    background-color:#FFF;
+    font-family:'Lato', sans-serif;
+}
+
+.light-text {
+    font-weight:lighter;
+}
+
+.bold-text {
+    font-weight:bold;
+}
+
+.italic-text {
+    font-style:italic;
+}
+
+.half-screen {
+    position:absolute;
+    width:50%;
+    height:250px;
+    background-color:gray;
+}
+
+.head-div {
+    margin:0 auto;
+    margin-top:100px;
+    width:75%;
+}
+
+.head-text {
+    color:#7c5483;
+    font-size:2em;
+    font-style:italic;
+}
+
+.support-text {
+    font-weight:lighter;
+    font-size:1.3em;
+}
+
+.breaker-div {
+    margin-bottom:30px;
+    width:100%;
+    height:75px;
+}
+
+.breaker-line {
+    position:relative;
+    top:5px;
+    margin:0 auto;
+    width:1px;
+    height:65px;
+    background-color:#7c5483;
+}
+
+.spacer-div {
+    margin-top:50px;
+    background-color:#F9F9F9;
+    height:20px;
+    width:100%;
+}
+
+.container-div {
+    margin:0;
+    background-color:#f5f5f5;
+    width:100%;
+}
+
+.filler-text {
+    font-weight:lighter;
+    font-size:2em;
+    text-align:center;
+    color:#7c5483;
+}
+
+.filler-text-less {
+    font-weight:lighter;
+    font-size:1.2em;
+    text-align:left;
+    color:#000;
+    margin-bottom:50px;
+    margin-left:5%;
+}
+
+/* History CSS*/
+
+.background-logo {
+    float:left;
+    position:relative;
+    left:1.5%;
+    width:175px;
+    height:175px;
+    opacity:.5;
+}
+
+.filler-text-hist {
+    font-size:1.3em;
+    margin-bottom:5px;
+    margin-left:10%;
+    width:80%;
+}
+
+/* Involve CSS */
+
+.head-div-image-parent {
+    position:relative;
+    right:50px;
+    float:left;
+    width:38vw;
+    height:0;
+    padding-bottom:25%;
+}
+
+.head-div-image {
+    position:absolute;
+    border:1px solid #9b909d;
+    border-radius:2%;
+    background-image:url("images/funCast.jpg");
+    background-position:center;
+    background-size:180%;
+    background-repeat:no-repeat;
+    height:100%;
+    width:100%;
+    
+    -ms-transform: rotate(-7deg); /* IE 9 */
+    -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+    transform: rotate(-7deg);
+}
+
+.head-div-right {
+    float:right;
+    width:33vw;
+    margin-top:35px;
+}
+
+form {
+    width:80%;
+    margin:0 auto;
+}
+
+/* Community CSS */
+
+.hold-name  {
+    height:850px;
+}
+
+.filler-text-comm {
+    font-size:1.3em;
+    text-align:center;
+    margin-left:10%;
+    width:80%;
+}
+
+.banner {
+    margin:0 auto;
+    width:100%;
+    height:50vh;
+    background-image:url("images/com.png");
+    background-position:center bottom;
+    background-size:cover;
+    box-shadow:5px 5px 30px #555;
+    
+}
+
+.align-center {
+    margin:0 auto;
+}
+
+.grouper {
+    height:500px;
+    width:325px;
+    box-shadow:3px 3px 10px #ccc;
+}
+
+.image-update {
+    width:100%;
+    height:40%;
+    border:0.3px solid #ccc;
+    border-bottom:1px solid #808080;
+    background-image:url("images/roa.png");
+    background-position:center;
+    background-size:100%;
+    background-repeat:no-repeat;
+}
+
+.description-update {
+    background-color:#fff;
+    border:0.3px solid #ccc;
+    border-top:1px solid #808080;
+    height:60%;
+}
+
+.description-update-header {
+    margin-left:5%;
+    font-size:1.2em;
+    color:#7c5483;
+}
+
+.divider {
+    height:2px;
+    width:15%;
+    margin-left:5%;
+    background-color:#7c5483;
+}
+
+.description-update-text {
+    width:90%;
+    margin-left:5%;
+    margin-top:5%;
+    font-weight:lighter;
+}
+
+/* Scaling for Involve */
+
+@media only screen and (min-width: 600px) and (max-width: 992px){
+    .head-div-image-parent {
+        padding-bottom:30%;
+    }
+    
+    .head-div-image {
+        height:120%;
+        border:none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .head-div-image-parent {
+        padding-bottom:0;
+        margin-top:-10%;
+        margin-left:-8%;
+        height:250px;
+        width:150%;
+        float:none;
+    }
+    
+    .head-div-image {
+        position:relative;
+        height:250px;
+        border:none;
+        
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+        transform: rotate(0deg);
+    }
+    
+    .head-div-right {
+        float:none;
+        width:100%;
+        margin-top:35px;
+    }
+}
+
+/* Scaling for Commnunity Involvement */
+
+@media only screen and (max-width: 1199px) and (min-width: 998px){
+    .grouper {
+        height:425px;
+        width:300px;
+    }
+    
+    .description-update-text {
+        height:170px;
+        overflow:scroll;
+    }
+}
+
+@media only screen and (max-width: 998px){
+    .col-md-4 {
+        margin-bottom:25px;
+    }
+    
+    .hold-name  {
+        height:100%;
+    }
+    
+    .grouper {
+        height:450px;
+        width:90%;
+    }
+    
+    .description-update-text {
+        height:170px;
+        overflow:scroll;
+    }
+}

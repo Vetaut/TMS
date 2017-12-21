@@ -1,0 +1,176 @@
+body {
+    background-color:#FFF;
+    font-family:'Lato', sans-serif;
+}
+
+.light-text {
+    font-weight:lighter;
+}
+
+.bold-text {
+    font-weight:bold;
+}
+
+.italic-text {
+    font-style:italic;
+}
+
+.large-text {
+    font-size:2.4em;
+}
+
+.float-clear {
+    float:clear;
+}
+
+.separate-div {
+    height:300px;
+    margin:10px 0 10px 0;
+}
+
+.separate-div-2 {
+    height:150px;
+    margin:10px 0 10px 0;
+}
+
+.head-div {
+    margin-top:100px;
+    width:90%;
+}
+
+.head-text {
+    padding-left:2%;
+    font-weight:lighter;
+    font-size:2em;
+}
+
+.person-container {
+    
+}
+
+.parent-person-image {
+    position:relative;
+    width:25%;
+    height:0;
+    padding-bottom:25%;
+}
+
+.parent-person-image-odd {
+    float:left;
+}
+
+.parent-person-image-even {
+    float:right;
+}
+
+.person-image {
+    position:absolute;
+    background-image:url("images/Drowsy.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    box-shadow:3px 3px 10px #ccc;
+    border:1px solid #ccc;
+    border-radius:0.7%;
+    width:100%;
+    height:100%;
+}
+
+.person-image-odd {
+    float:left;
+}
+
+.person-image-even {
+    float:right;
+}
+
+.breaker-line-odd {
+    height:1px;
+    width:50%;
+    background-color:#7c5483;
+}
+
+.breaker-line-even {
+    height:1px;
+    width:50%;
+    margin-left:50%;
+    background-color:#7c5483;
+}
+
+.person-description-header {
+    font-weight:bold;
+    font-size:2em;
+}
+
+.person-description-header-odd {
+    
+}
+
+.person-description-header-even {
+    text-align:right;
+}
+
+.person-description-header-even {
+    
+}
+
+.parent-person-description {
+    position:relative;
+    top:20px;
+    height:0;
+    width:50%;
+    padding-bottom:25%;
+}
+
+.parent-person-description-odd {
+    margin-left:5%;
+    float:left;
+}
+
+.parent-person-description-even {
+    margin-right:5%;
+    float:right;
+}
+
+.person-description {
+    font-size:1.5em;
+}
+
+.person-description-odd {
+    margin:10px 0 0 1%;
+}
+
+.person-description-even {
+    margin:10px 0 0 0;
+    text-align:right;
+}
+
+.committee-text {
+    text-align:center;
+    font-size:1.4em;
+    font-weight:lighter;
+}
+
+.half-screen {
+    position:absolute;
+    width:50%;
+    height:250px;
+    background-color:gray;
+}
+
+.more-space {
+    width:100%;
+    height:30px;
+}
+
+@media only screen and (max-width: 1310px){
+    .separate-div-2 {
+        display:none;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .parent-person-description {
+        width:70%;
+    }
+}
