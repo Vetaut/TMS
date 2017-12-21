@@ -32,7 +32,7 @@
         height:250px;
         background-color:gray;
     }
-                                        
+
 </style>
 
 </head>
@@ -64,11 +64,14 @@
             <div class="collapse navbar-collapse navbar-center-container" id="data-spy">
                     
                 <ul class="nav navbar-nav navbar-center">
-                        
-                    <li><a href="#upcoming">Upcoming</a></li>
-                    <li><a href="about.html">About</a></li>
+                    
+                    <li><a href="outreach.html">Outreach</a></li>
                     <li><a target="_blank" href="http://giveto.psu.edu/s/1218/thon/2014/p2p.aspx?sid=1218&gid=3&pgid=1135">THON</a></li>
-                    <li><a href="#other">Children's Show</a></li>
+                    <li><a href="index.html#upcoming">Upcoming</a></li>
+                    <li><a href="index.html#other">Children's Show</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li id="no-display"><a href="contact.html">Contact</a></li>
+                    
                     
                 </ul>
                     
@@ -115,6 +118,16 @@
         </div> <!-- container-fluid -->
             
     </div> <!-- navbar -->
+    
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" id="bot-bar">
+            
+        <p class="navbar-text navbar-right" id="contact"><a href="contact.html">Contact Us</a></p>
+        <a href="https://www.facebook.com/psuthespians/" target="_blank"><img src="images/fb.png" class="navbar-social navbar-right" id="contact"></img></a>
+        <a href="https://twitter.com/psuthespians" target="_blank"><img src="images/twitter.svg" class="navbar-social navbar-right" id="contact"></img></a>
+        <!-- NEEDS TO BE A DIFFERENT LOGO!!! -->
+        <a href="https://www.instagram.com/psuthespians/" target="_blank"><img src="images/IG.png" class="navbar-social navbar-right" id="contact"></img></a>
+
+    </nav>
         
     <div class="image" id="main">
             
@@ -125,7 +138,7 @@
         <div class="expand-down">
                 
             <button class="btn expand-button" type="button" data-toggle="collapse" data-target="#expand" aria-expanded="false" aria-controls="expand">
-                <span class="glyphicon glyphicon-chevron-down"></span>
+                <span class="glyphicon glyphicon-chevron-down down"></span>
             </button>
                 
         </div> <!-- end expand-down -->
@@ -152,9 +165,18 @@
                     <div class="col-md-3 box more-info-text">Montana Telman</div>
                     <div class="col-md-3 box more-info-text">Madelyn Genre</div>
                     <div class="col-md-3 box more-info-text">Kyle Chiavetta</div>
+                    <div class="col-md-12 box more-info-text">
+                        
+                        <button type="button" class="btn btn-clear" data-toggle="modal" data-target="#modalOne">
+                            
+                            <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
+                        
+                        </button>
+                        
+                    </div>
                         
                 </div>
-                    
+                
                 <p class="more-info-p light-text">The curtain rises on a present-day musical theatre fanatic eager to tell you about her favorite Broadway musical -- "The Drowsy Chaperone." She's the ultimate fan and "Drowsy" is her guilty pleasure.
                     
                     As she begins listening to the rare cast recording, the show cleverly and magically blooms to life, telling the hilarious tale of a pampered Broadway starlet and her debonair fiance, an overzealous producer, a dizzy chorine, the Latin lover and a couple of bumbling gangsters. Ruses are played. Hi-jinks occur. And the plot spins everyone into musical comedy euphoria.</p>
@@ -190,9 +212,19 @@
                 <br />
                     
                 <div class="row">
+                    
+                    <div class="col-md-4 box description-text light-text">Thursday, October 12 at 7:30pm</div>
+                    <div class="col-md-4 box description-text light-text">Friday, October 13 at 7:30pm</div>
+                    <div class="col-md-4 box description-text light-text">Saturday, October 14 at 1:30pm and 7:30pm</div>
                         
-                    <div class="col-md-12 box description-text light-text">10/12 - 10/14</div>
-                        
+                </div>
+                
+                <br />
+                
+                <div class="row">
+                    
+                    <div class="col-md-12 box description-text light-text">Reserve tickets <a target="_blank" class="eventbrite" href="https://www.eventbrite.com/e/the-drowsy-chaperone-presented-by-the-penn-state-thespians-tickets-38006952819">here</a> or in the HUB 10/9 - 10/13 at 10:00am - 4:00pm</div>
+                    
                 </div>
                     
             </div> <!-- end well -->
@@ -204,16 +236,14 @@
         <div class="map-container">
                 
             <div class="map-image"></div>
-                
-            <div class="map-blocker"></div>
-                
-            <div class="marker-container">
-                    
+            
+            <button class="btn map-button" type="button" data-toggle="modal" data-target="#map-modal">
+            <div class="map-blocker">
                 <span class="glyphicon glyphicon-map-marker map-marker"></span>
-                    
             </div>
+            </button>
                 
-            <button class="btn map-button" type="button" data-toggle="modal" data-target="#map-modal"></button>
+            
                 
         </div> <!-- end map-container -->
             
@@ -318,35 +348,15 @@
                         
                     <div class="scroller">
                             
-                        <div class="scroll-div">
-                                
-                            <div class="scroll-img" style="background-image:url('images/b&b.png')"></div>
-                                
-                        </div> <!-- end scroll-Div -->
+                        <div class="scroll-div" style="background-image:url('images/b&b.png')"></div>
                             
-                        <div class="scroll-div">
-                                
-                            <div class="scroll-img" style="background-image:url('images/roa.png')" ></div>
-                                
-                        </div>
+                        <div class="scroll-div" style="background-image:url('images/roa.png')"></div>
                             
-                        <div class="scroll-div">
-                                
-                            <div class="scroll-img" style="background-image:url('images/itw.png')" ></div>
-                                
-                        </div>
+                        <div class="scroll-div" style="background-image:url('images/itw.png')"></div>
                             
-                        <div class="scroll-div">
-                                
-                            <div class="scroll-img" style="background-image:url('images/lb.png')" ></div>
-                                
-                        </div>
+                        <div class="scroll-div" style="background-image:url('images/lb.png')"></div>
                             
-                        <div class="scroll-div">
-                                
-                            <div class="scroll-img" style="background-image:url('images/msc.png')" ></div>
-                                
-                        </div>
+                        <div class="scroll-div" style="background-image:url('images/msc.png')"></div>
                             
                     </div> <!-- scroller -->
                         
@@ -369,24 +379,163 @@
                         
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         
-                    <h4 class="modal-title" id="Harmonies">Harmonies!</h4>
+                    <h4 class="modal-title modal-name" id="Header">Drowsy Chaperone</h4>
                         
                 </div> <!-- end modal-header -->
                     
                 <div class="modal-body">
+                    
+                    <div class="row">
                         
-                    <p>This is place holder text</p>
-                    <p>This is place holder text</p>
-                    <p>This is place holder text</p>
-                    <p>This is place holder text</p>
-                    <p>This is place holder text</p>
-                    <p>This is place holder text</p>
-                    <p>This is place holder text</p>
-                    <p>This is place holder text</p>
-                    <p>This is place holder text</p>
-                    <p>This is place holder text</p>
-                    <p>This is place holder text</p>
+                        <div class="col-md-12 box modal-head">Big Three</div>
                         
+                    </div>
+                    
+                    <br />
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-4 box">
+                            <p class="modal-part">Technical Director</p>
+                            <p class="modal-cast">Andrew Bean</p>
+                        </div>
+                        <div class="col-md-4 box">
+                            <p class="modal-part">Director</p>
+                            <p class="modal-cast">Julie Whelan</p>
+                        </div>
+                        <div class="col-md-4 box">
+                            <p class="modal-part">Producer</p>
+                            <p class="modal-cast">Jenna Maida</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <hr />
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-12 box modal-head">Cast</div>
+                        
+                    </div>
+                    
+                    <br />
+                    
+                    <div class="row">
+                    
+                        <div class="col-md-4 box">
+                            <p class="modal-part">Woman In Chair</p>
+                            <p class="modal-cast">Lauren Weber</p>
+                        </div>
+                        <div class="col-md-4 box">
+                            <p class="modal-part">Drowsy Chaperone</p>
+                            <p class="modal-cast">Montana Telman</p>
+                        </div>
+                        <div class="col-md-4 box">
+                            <p class="modal-part">Janet Van Graaff</p>
+                            <p class="modal-cast">Madeyln Genre</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <br />
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-4 box">
+                            <p class="modal-part">Robert Martin</p>
+                            <p class="modal-cast">Kyle Chiavetta</p>
+                        </div>
+                        <div class="col-md-4 box">
+                            <p class="modal-part">George</p>
+                            <p class="modal-cast">Reed Callan</p>
+                        </div>
+                        <div class="col-md-4 box">
+                            <p class="modal-part">Kitty</p>
+                            <p class="modal-cast">Addison Albert</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <br />
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-4 box">
+                            <p class="modal-part">Adolpho</p>
+                            <p class="modal-cast">Jason Schwartz</p>
+                        </div>
+                        <div class="col-md-4 box">
+                            <p class="modal-part">Feldzieg</p>
+                            <p class="modal-cast">Jon Harris</p>
+                        </div>
+                        <div class="col-md-4 box">
+                            <p class="modal-part">Gangster 1</p>
+                            <p class="modal-cast">Mia Nicolai</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <br />
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-3 box">
+                            <p class="modal-part">Ganster 2</p>
+                            <p class="modal-cast">Laney Pleasanton</p>
+                        </div>
+                        <div class="col-md-3 box">
+                            <p class="modal-part">Tottendale</p>
+                            <p class="modal-cast">Camryn Powers</p>
+                        </div>
+                        <div class="col-md-3 box">
+                            <p class="modal-part">Underling</p>
+                            <p class="modal-cast">Evan Cuccaro</p>
+                        </div>
+                        <div class="col-md-3 box">
+                            <p class="modal-part">Trix</p>
+                            <p class="modal-cast">Isabella Roll</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <br />
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-12 box modal-part">Ensemble</div>
+                        
+                    </div>
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-3 box modal-cast">Paul Basher</div>
+                        <div class="col-md-3 box modal-cast">Josh Brown</div>
+                        <div class="col-md-3 box modal-cast">Maggie Dennis</div>
+                        <div class="col-md-3 box modal-cast">Noah Hanaham</div>
+                        
+                    </div>
+                    
+                    <br />
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-3 box modal-cast">Gerald Koledin</div>
+                        <div class="col-md-3 box modal-cast">Carly Lassa</div>
+                        <div class="col-md-3 box modal-cast">Tom Lynch</div>
+                        <div class="col-md-3 box modal-cast">Bridget Miller</div>
+                        
+                    </div>
+                    
+                    <br />
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-4 box modal-cast">Mikaela Sheridan</div>
+                        <div class="col-md-4 box modal-cast">Jackie Tremblay</div>
+                        <div class="col-md-4 box modal-cast">Chad Poz</div>
+                        
+                    </div>
+                    
                 </div> <!-- end modal-body --->
                     
                 <div class="modal-footer">
@@ -435,6 +584,8 @@
                     
                 <p class="more-info-p light-text">Come write with Children's Show every Thursday at 5 pm and help us create a world of make-believe for the children of State College. Afterward, join our crew to put on the show in Schlow Library. For any questions, contact the Children's Show chairs at thespianschildrensshow@gmail.com. </p>
                 
+                <br />
+                
             </div> <!-- end well -->
             
         </div> <!-- end container -->
@@ -475,15 +626,21 @@
             </div>
             
             <br />
+            
+            <br />
+            
+            <br />
                 
         </div> <!-- end container -->
             
     </div> <!-- end description -->
+    
+    
         
 </body>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
     
@@ -499,8 +656,25 @@
                                         map: map
                                         });
     }
+
 </script>
-    
+
+<script>
+
+$(".scroll-div").hover(
+    function() {
+        $( this ).stop(true,false).animate( {
+              "background-size":'300px'
+          }, 500);
+    }, function() {
+        $( this ).stop(true,false).animate( {
+              "background-size":'250px'
+      }, 500);
+    }
+);
+
+</script>
+
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaA7Tyd1lQbBY5mFtBJcM8qWxozahjIC8&callback=initMap">
 </script>
